@@ -1,10 +1,13 @@
 .header {
   width: 100%;
+  position: fixed;
+  z-index: 999;
+  top: 0px;
   display: flex;
   justify-content: space-between;
   align-items: baseline;
   padding: 1rem 10%;
-  height: 5rem;
+  height: 6rem;
   background-color: #202020;
 }
 
@@ -16,12 +19,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #d64f49;
+  color: #dcf8bd;
 }
 
 .logo a {
   text-decoration: none;
-  color: #d64f49;
+  color: #dcf8bd;
 }
 .navigation {
   display: flex;
@@ -30,7 +33,7 @@
 
 .navigation a {
   text-decoration: none;
-  color: #d64f49;
+  color: #dcf8bd;
   font-size: 1rem;
 }
 

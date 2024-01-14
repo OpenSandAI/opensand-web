@@ -1,0 +1,55 @@
+.footerWrapper {
+  display: flex;
+  justify-content: center;
+  padding: 3rem;
+  .content {
+    flex-grow: 1;
+    max-width: 80rem;
+    .globalTitle {
+      font-size: 2rem;
+      color: #dcf8bd;
+      text-shadow: 0.1rem 0.1rem 0.1rem #000;
+      transform: translateZ(1rem) scale(1.1);
+      transform: skewX(-20deg);
+    }
+    .linkWrapper {
+      display: flex;
+      padding: 3rem 8rem;
+      gap: 20rem;
+      .left {
+        display: flex;
+        flex-direction: column;
+        line-height: 2.3;
+        .title {
+          font-size: 2rem;
+          color: #2b5b56;
+        }
+        .linkItem {
+          font-size: 1.5rem;
+        }
+      }
+      .right {
+        display: flex;
+        flex-direction: column;
+        padding-top: 1rem;
+        line-height: 2.3;
+        .title {
+          font-size: 2rem;
+          margin-bottom: 1rem;
+          color: #2b5b56;
+        }
+      }
+    }
+  }
+}
+
+.customLink {
+  color: #000;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.customLink span:hover {
+  text-decoration: underline;
+}

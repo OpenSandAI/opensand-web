@@ -1,9 +1,12 @@
-import Landing from '@/components/Lading';
+import Footer from '@/components/Footer';
+import Landing from '@/components/Landing';
 
 export default function Home() {
+
   return (
     <main>
       <Landing />
+      <Footer />
     </main>
   );
 }
