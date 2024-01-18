@@ -1,0 +1,40 @@
+.main {
+    max-width: 80rem;
+    flex-grow: 1;
+
+
+
+
+
+    .chat {
+        display: flex;
+        flex-direction: column;
+        min-height: 50rem;
+        padding: 2rem;
+        padding-top: 0;
+        border-radius: 1rem;
+        border: 1px solid #ddd;
+        background-color: #fff;
+        max-height: 25rem;
+        box-shadow: 0 4px 6px rgb(49 54 68 / 5%), 0 5px 20px rgb(49 54 68 / 8%);
+
+        .logs {
+            flex: 1;
+            overflow-y: auto;
+            margin-bottom: 1rem;
+
+            .log {
+                gap: 0.4rem;
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    }
+
+
+
+    .inputWrapper {
+        display: flex;
+        gap: 2rem;
+    }
+}
