@@ -5,7 +5,10 @@ interface AppsProps {}
 
 const TestApp: FC<AppsProps> = props => {
   const messages = [
-    { role: 'system', content: '你是一个有用的邮件助手，需要帮忙分析邮件内容。' },
+    {
+      role: 'system',
+      content: '你是一个有用的邮件助手，需要帮忙分析邮件内容。',
+    },
     {
       role: 'user',
       content:
@@ -14,59 +17,64 @@ const TestApp: FC<AppsProps> = props => {
     {
       role: 'user',
       content:
-        '邮件内容如下Dear Team, Please kindly be noted that below staff has changed the title to system Engineer effective from 1/12/2023, please kindly update all IT setting. Thankyou!请分析邮件，是由哪个小组负责处理，使用中文回答',
+        '邮件内容如下 Dear Team, Please kindly be noted that below staff has changed the title to system Engineer effective from 1/12/2023, please kindly update all IT setting. Thankyou!请分析邮件，是由哪个小组负责处理，使用中文回答',
     },
   ];
   const postData = {
-    model: '01-ai/Yi-34B-Chat-4bits',
     messages,
-    max_tokens: 1024,
-    temperature: 1.0,
+    temperature: 0,
     stream: true,
   };
 
-  const url = 'https://api-llm.opensand.ai/v1/chat/completions';
+  const url = 'https://api.opensand.ai/api/v1/algorithm/llm/stream';
+  const token =
+    'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im9wZW5zYW5kIiwiZXhwIjoxNzA2MTY3MzExODY4fQ.kmjo8Ic_04BTWT7mTJvRuuvsOhjkjGPKHL1rhB6iuz4';
   const PostStream = async function () {
     console.log('url', url);
     fetch(url, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
+        Authorization: token,
       },
       body: JSON.stringify(postData),
     })
       .then(response => {
         // The response is a ReadableStream
         const reader = response?.body?.getReader();
-        console.log('response', response, reader);
 
         // Function to handle each chunk of data
-        const processChunk = ({ done, value }: { done: boolean; value: any }) => {
-          console.log('Received chunk', done, value);
+        let text = '';
+        const processChunk = ({ done, value }) => {
           if (done) {
             console.log('Stream complete');
             return;
           }
 
           // Assuming the server sends JSON data, you can convert the chunk to text
-          const text = new TextDecoder().decode(value);
-          console.log('Received chunk', text);
-
+          const valueString = new TextDecoder().decode(value);
+          console.log('Chunk received:', valueString);
           // Parse the chunk if it's JSON and do something with the data
           try {
-            const jsonData = JSON.parse(text);
+            const data = valueString.split('data: ')[1].trim();
+            if (data === '[DONE]') {
+              console.log('Stream complete');
+              return;
+            }
+            const jsonData = JSON.parse(data);
             // Handle the JSON data
-            console.log(jsonData);
+            text += jsonData['choices'][0]['delta']['content'];
+            console.log(text);
           } catch (error) {
             console.error('Error parsing JSON chunk', error);
           }
 
           // Read the next chunk of data
-          reader?.read().then(processChunk);
+          reader?.read().then(processChunk as any);
         };
 
         // Start reading the stream
-        reader?.read().then(processChunk);
+        reader?.read().then(processChunk as any);
       })
       .catch(error => {
         console.error('Fetch error:', error);
