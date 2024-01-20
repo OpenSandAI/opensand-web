@@ -40,7 +40,7 @@ const PostContent = ({ post }: { post: any }) => {
   return (
     <article className={styles.content}>
       <PostHeader title={post.title} image={imagePath} />
-      <ReactMarkdown renderers={customRenderers}>{post.content}</ReactMarkdown>
+      <ReactMarkdown components={customRenderers}>{post.content}</ReactMarkdown>
     </article>
   );
 };

@@ -2,7 +2,6 @@
 import React, { FormEvent, useCallback, useState } from 'react';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
-import rehypeHighlight from 'rehype-highlight';
 import { Button, CircularProgress, Input } from '@mui/material';
 import Image from 'next/image';
 import { Log, Message } from './types.d';
@@ -115,7 +114,7 @@ const ChatBot = () => {
               <div key={l.id} className={styles.log}>
                 <div className={styles.avatar}>{l.role === 'user' ? 'User:' : 'OpenSand:'}</div>
                 <div className={l.answering ? '' : styles.streaming}>
-                  <ReactMarkdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeHighlight]}>
+                  <ReactMarkdown remarkPlugins={[remarkGfm]}>
                     {l.answering ? answeringContent : l.content}
                   </ReactMarkdown>
                 </div>
