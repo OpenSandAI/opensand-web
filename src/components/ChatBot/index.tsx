@@ -1,13 +1,14 @@
 'use client';
-import React, { useCallback, useState } from 'react';
+import React, { FormEvent, useCallback, useState } from 'react';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import rehypeHighlight from 'rehype-highlight';
-import { Button, Input } from '@mui/material';
+import { Button, CircularProgress, Input } from '@mui/material';
+import Image from 'next/image';
 import { Log, Message } from './types.d';
+import ask from './ask';
 import 'highlight.js/styles/vs2015.css';
 import styles from './index.module.css';
-import ask from './ask';
 
 const ariaLabel = { 'aria-label': 'description' };
 
@@ -17,17 +18,18 @@ const enum Role {
 }
 
 const ChatBot = () => {
+  const [loading, setLoading] = useState(false);
   const [logs, setLogs] = useState<Log[]>(() => []);
   const [question, setQuestion] = useState('');
   const [answeringContent, setAnsweringContent] = useState('');
 
   const askQuestion = useCallback((messages: Message[]) => {
-    setAnsweringContent('&ZeroWidthSpace;');
-
+    setLoading(true);
     let contents = '';
     ask(str => {
       if (!str) return;
       if (str === '[DONE]') {
+        setLoading(false);
         setAnsweringContent('');
         setLogs(prev =>
           prev.map(i => {
@@ -65,7 +67,8 @@ const ChatBot = () => {
 
   const isAnswering = Boolean(answeringContent);
 
-  const onSubmit = () => {
+  const onSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
     if (isAnswering || !question) return;
     const messages = logs.concat({
       id: crypto.randomUUID(),
@@ -88,13 +91,30 @@ const ChatBot = () => {
 
   return (
     <div className={styles.main}>
+      <div className={styles.chatWrapper}>
+        <div className={styles.chatTitle}>
+          <Image
+            width={40}
+            style={{ marginLeft: 30 }}
+            height={40}
+            className={styles.image}
+            src="/images/site/apps/chat-icon.svg"
+            alt="landing-logo"
+          />
+          <span>OpenSand Chat</span>
+        </div>
         <div className={styles.chat}>
+          {loading && (
+            <div className={styles.loading}>
+              <CircularProgress color="secondary" variant="indeterminate" />
+            </div>
+          )}
+
           <div className={styles.logs}>
             {logs.map(l => (
               <div key={l.id} className={styles.log}>
-                {/* @ts-ignore */}
-                <div>{l.role === Role.User ? 'User:' : 'ChatGPT:'}</div>
-                <div className={l.answering ? 'streaming' : ''}>
+                <div className={styles.avatar}>{l.role === 'user' ? 'User:' : 'OpenSand:'}</div>
+                <div className={l.answering ? '' : styles.streaming}>
                   <ReactMarkdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeHighlight]}>
                     {l.answering ? answeringContent : l.content}
                   </ReactMarkdown>
@@ -103,21 +123,24 @@ const ChatBot = () => {
             ))}
           </div>
           <div className={styles.inputWrapper}>
-            <Input
-              autoFocus
-              fullWidth
-              placeholder="Please enter your question"
-              value={question}
-              onChange={e => {
-                setQuestion(e.target.value);
-              }}
-              inputProps={ariaLabel}
-            />
-            <Button variant="contained" onClick={onSubmit}>
-              发送
-            </Button>
+            <form onSubmit={onSubmit}>
+              <Input
+                autoFocus
+                fullWidth
+                placeholder="Please enter your question"
+                value={question}
+                onChange={e => {
+                  setQuestion(e.target.value);
+                }}
+                inputProps={ariaLabel}
+              />
+              <Button type="submit" disabled={loading} variant="contained">
+                Send
+              </Button>
+            </form>
           </div>
         </div>
+      </div>
     </div>
   );
 };

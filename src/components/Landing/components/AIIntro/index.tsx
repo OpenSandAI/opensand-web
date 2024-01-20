@@ -30,7 +30,7 @@ const AIIntro: FC<AIIntroProps> = props => {
           width={1422}
           height={508}
           className={styles.image}
-          src="/landing/blockchain-ai.jpg"
+          src="/images/site/landing/blockchain-ai.jpg"
           alt="blockchain-ai"
         />
     </div>

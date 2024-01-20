@@ -21,7 +21,7 @@ const AppIntro: FC<AppIntroProps> = props => {
         <span className={styles.subTitle}>Chat</span>
       </div>
       <div className={styles.description}>
-        <Image width={500} height={250} className={styles.image} src="/apps/apps-description.png" alt="landing-logo" />
+        <Image width={500} height={250} className={styles.image} src="/images/site/apps/apps-description.png" alt="landing-logo" />
         <div className={styles.right}>
           <div className={styles.rightTitle}>A Conversational AI Platform</div>
           <div className={styles.rightContent}>
@@ -34,7 +34,7 @@ const AppIntro: FC<AppIntroProps> = props => {
       </div>
 
       <div className={styles.operation}>
-        <a onClick={handleChatOpen} className={styles.button} href="/developer">
+        <a onClick={handleChatOpen} className={styles.button} href="/chat">
           Open Now
         </a>
       </div>

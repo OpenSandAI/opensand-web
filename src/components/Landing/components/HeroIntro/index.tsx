@@ -15,7 +15,7 @@ const HeroIntro: FC<HeroIntroProps> = props => {
           width={800}
           height={800}
           className={styles.landingLogo}
-          src="/landing/tech-block.png"
+          src="/images/site/landing/tech-block.png"
           alt="landing-logo"
         />
         <div className={styles.header}>

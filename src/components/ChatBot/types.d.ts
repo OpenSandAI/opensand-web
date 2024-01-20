@@ -4,7 +4,7 @@ export const enum Role {
   }
   
   export interface Message {
-    role: Role;
+    role: string;
     content: string;
   }
   

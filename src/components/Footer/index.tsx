@@ -28,7 +28,7 @@ const Footer: FC<FooterProps> = props => {
         <Grid container spacing={2}>
           <Grid item xs={2}>
             <Item style={{ textAlign: 'center' }}>
-              <Image width={200} height={200} src="/landing/landing-logo.png" alt="landing-logo" />
+              <Image width={200} height={200} src="/images/site/landing/landing-logo.png" alt="landing-logo" />
               <div className={styles.globalTitle}>OpenSand</div>
             </Item>
           </Grid>

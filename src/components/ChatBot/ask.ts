@@ -1,15 +1,5 @@
 import type { Message } from './types.d';
 
-const parseLine = (str: string) => {
-  const match = /^(.*?):\s?(.*)$/.exec(str);
-
-  if (!match) {
-    return [null, str];
-  }
-
-  return [match[1], match[2]].map((i) => i ?? null);
-};
-
 type ParseResult =
   | {
       type: 'event';
@@ -21,6 +11,16 @@ type ParseResult =
       type: 'retry';
       value: number;
     };
+
+const parseLine = (str: string) => {
+  const match = /^(.*?):\s?(.*)$/.exec(str);
+
+  if (!match) {
+    return [null, str];
+  }
+
+  return [match[1], match[2]].map((i) => i ?? null);
+};
 
 const createParseChunkFn = (onParse: (val: ParseResult) => void) => {
   let buffer = '';

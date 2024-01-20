@@ -13,7 +13,7 @@ const ProductIntro: FC<ProductIntroProps> = props => {
         <span className={styles.subTitle}>Your way</span>
       </div>
       <div className={styles.description}>
-        <Image width={600} height={300} className={styles.image} src="/landing/pexels-google.jpg" alt="landing-logo" />
+        <Image width={600} height={300} className={styles.image} src="/images/site/landing/pexels-google.jpg" alt="landing-logo" />
         <div className={styles.right}>
           <div className={styles.rightTitle}>
             Avalanche has the advanced tooling you need to accelerate from idea to launch.
