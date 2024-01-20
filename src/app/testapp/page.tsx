@@ -45,7 +45,7 @@ const TestApp: FC<AppsProps> = props => {
 
         // Function to handle each chunk of data
         let text = '';
-        const processChunk = ({ done, value }) => {
+        const processChunk = ({ done, value }: { done: boolean; value: any }) => {
           if (done) {
             console.log('Stream complete');
             return;
