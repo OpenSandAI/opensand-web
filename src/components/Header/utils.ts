@@ -5,11 +5,11 @@ export const NAVIGATION_LIST = [
     path: 'apps',
   },
   {
-    name: 'WhitePaper',
+    name: 'Whitepaper',
     path: 'whitepaper',
   },
   {
-    name: 'MileStone',
+    name: 'Milestone',
     path: 'milestone',
   },
   {
@@ -17,7 +17,7 @@ export const NAVIGATION_LIST = [
     path: 'about',
   },
   {
-    name: 'ContactUs',
+    name: 'Contact Us',
     path: 'contactUs',
   },
   {

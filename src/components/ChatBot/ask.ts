@@ -1,16 +1,4 @@
-import type { Message } from './types.d';
-
-type ParseResult =
-  | {
-      type: 'event';
-      event: string | null;
-      id: string | null;
-      data: string | null;
-    }
-  | {
-      type: 'retry';
-      value: number;
-    };
+import type { Message, ParseResult } from './types.d';
 
 const parseLine = (str: string) => {
   const match = /^(.*?):\s?(.*)$/.exec(str);
@@ -19,7 +7,7 @@ const parseLine = (str: string) => {
     return [null, str];
   }
 
-  return [match[1], match[2]].map((i) => i ?? null);
+  return [match[1], match[2]].map(i => i ?? null);
 };
 
 const createParseChunkFn = (onParse: (val: ParseResult) => void) => {
@@ -77,23 +65,18 @@ const createParseChunkFn = (onParse: (val: ParseResult) => void) => {
   };
 };
 
-const ask = async (
-  onMessage: (data: string | null) => void,
-  messages: Message[]
-) => {
-  const res = await fetch('/api/v1/chat/completions', {
+const ask = async (onMessage: (data: string | null) => void, messages: Message[]) => {
+  const token =
+    'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im9wZW5zYW5kIiwiZXhwIjoxNzA2MTY3MzExODY4fQ.kmjo8Ic_04BTWT7mTJvRuuvsOhjkjGPKHL1rhB6iuz4';
+  const res = await fetch('https://api.opensand.ai/api/v1/algorithm/llm/stream', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
-      Authorization: 'Bearer e59f67cf0e5e4d56bf4273c1f2fc6fe1', // Fill your OpenAI key
+      Authorization: token,
     },
     body: JSON.stringify({
       stream: true,
-      max_tokens: 1000,
-      model: 'gpt-3.5-turbo',
-      temperature: 0.8,
-      top_p: 1,
-      presence_penalty: 1,
+      temperature: 0,
       messages,
     }),
   });
@@ -102,7 +85,7 @@ const ask = async (
     throw new Error('Fetch sse error');
   }
 
-  const parseChunk = createParseChunkFn((event) => {
+  const parseChunk = createParseChunkFn(event => {
     if (event.type === 'event') {
       onMessage(event.data);
     }

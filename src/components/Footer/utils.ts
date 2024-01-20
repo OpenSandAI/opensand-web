@@ -35,34 +35,24 @@ export const routeConfigList = {
   title: 'route',
   children: [
     {
-      key: 'WhitePaper',
-      title: 'WhitePaper',
-      link: 'WhitePaper',
+      key: 'Whitepaper',
+      title: 'Whitepaper',
+      link: 'whitepaper',
     },
     {
-      key: 'MileStone',
-      title: 'MileStone',
-      link: 'MileStone',
-    },
-    {
-      key: 'WhitePaper',
-      title: 'WhitePaper',
-      link: 'WhitePaper',
-    },
-    {
-      key: 'MileStone',
-      title: 'MileStone',
-      link: 'MileStone',
+      key: 'Milestone',
+      title: 'Milestone',
+      link: 'milestone',
     },
     {
       key: 'About',
       title: 'About',
-      link: 'About',
+      link: 'about',
     },
     {
-      key: 'ContactUs',
-      title: 'Contact Us',
-      link: 'ContactUs',
+      key: 'ContactUS',
+      title: 'Contact US',
+      link: 'contact',
     },
   ],
 };

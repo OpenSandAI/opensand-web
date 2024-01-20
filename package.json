@@ -12,6 +12,7 @@
     "@emotion/react": "^11.11.3",
     "@emotion/styled": "^11.11.0",
     "@fontsource/roboto": "^5.0.8",
+    "@mui/icons-material": "^5.15.5",
     "@mui/material": "^5.15.4",
     "@types/react-syntax-highlighter": "^15.5.11",
     "gray-matter": "^4.0.3",
@@ -19,9 +20,9 @@
     "next": "14.0.4",
     "react": "^18",
     "react-dom": "^18",
-    "react-markdown": "6.0.0",
+    "react-markdown": "^9.0.1",
     "react-syntax-highlighter": "^15.5.0",
-    "rehype-highlight": "^6.0.0",
+    "rehype-highlight": "^7.0.0",
     "remark-gfm": "^4.0.0"
   },
   "devDependencies": {
