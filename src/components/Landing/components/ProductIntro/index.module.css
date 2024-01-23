@@ -1,18 +1,9 @@
 .productContent {
-  display: flex;
-  position: relative;
-  width: 100%;
-  max-width: 80rem;
-  margin: 0 auto;
-  flex-direction: column;
-  gap: 1.5rem;
   margin-top: 15rem;
   .title {
-    font-size: 5.5rem;
     font-weight: 600;
     margin-bottom: 3rem;
-    background-repeat: no-repeat;
-    line-height: 1.1;
+    line-height: 1.6;
     color: #dcf8bd;
     .subTitle {
       margin-left: 3rem;
@@ -20,17 +11,11 @@
     }
   }
   .description {
-    display: flex;
-    gap: 2rem;
     .image {
       border-radius: 25px;
     }
     .right {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-evenly;
       .rightTitle {
-        color: #fff;
         color: #dcf8bd;
         font-weight: 500;
         font-size: 2rem;
@@ -38,23 +23,26 @@
       }
       .rightContent {
         color: #fff;
+        line-height: 1.5;
         font-size: 1.5rem;
       }
     }
   }
-  .operation {
-    display: flex;
-    justify-content: flex-end;
-    .button {
-      margin-right: 12rem;
-      border-radius: 999px;
-      cursor: pointer;
-      background-color: #dcf8bd;
-      color: #000;
-      padding: 1rem 2rem;
-      font-size: 1.5rem;
-      text-decoration: none;
-      display: inline-block;
-    }
-  }
+}
+
+.operation {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 3rem;
+}
+
+.button {
+  border-radius: 999px;
+  cursor: pointer;
+  background-color: #dcf8bd;
+  color: #000;
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  text-decoration: none;
+  display: inline-block;
 }

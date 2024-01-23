@@ -1,69 +1,66 @@
 .main {
-    max-width: 80rem;
-    flex-grow: 1;
+  margin-top: 5rem;
+}
 
-    .chatWrapper {
-        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
-            rgba(0, 0, 0, 0.12) 0px -12px 30px,
-            rgba(0, 0, 0, 0.12) 0px 4px 6px,
-            rgba(0, 0, 0, 0.17) 0px 12px 13px,
-            rgba(0, 0, 0, 0.09) 0px -3px 5px;
+.chatWrapper {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
 
-        .chatTitle {
-            display: flex;
-            height: 50px;
-            gap: 2rem;
-            border-radius: 0.5rem 0.5rem 0 0;
-            align-items: center;
-            background-color: #fff;
-            border-bottom: 1px solid gray;
-        }
+.chatTitle {
+  display: flex;
+  height: 50px;
+  gap: 2rem;
+  border-radius: 0.5rem 0.5rem 0 0;
+  align-items: center;
+  background-color: #fff;
+  border-bottom: 1px solid gray;
+}
 
-        .chatTitle>span {
-            font-size: 22px;
-            font-weight: 600;
-        }
+.chatTitle > span {
+  font-size: 22px;
+  font-weight: 600;
+}
 
-        .chat {
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            border-radius: 0 0 0.5rem 0.5rem;
-            border: 1px solid #ddd;
-            min-height: 50rem;
-            padding: 2rem;
-            background-color: #fff;
-            max-height: 25rem;
-            box-shadow: 0 4px 6px rgb(49 54 68 / 5%), 0 5px 20px rgb(49 54 68 / 8%);
+.chat {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0 0 0.5rem 0.5rem;
+  border: 1px solid #ddd;
+  min-height: 50rem;
+  padding: 2rem;
+  background-color: #fff;
+  max-height: 25rem;
+  box-shadow: 0 4px 6px rgb(49 54 68 / 5%), 0 5px 20px rgb(49 54 68 / 8%);
+}
 
-            .logs {
-                flex: 1;
-                overflow-y: auto;
-                margin-bottom: 1rem;
+.logs {
+  flex: 1;
+  overflow-y: auto;
+  margin-bottom: 1rem;
+}
 
-                .log {
-                    gap: 0.4rem;
-                    display: flex;
-                    flex-direction: column;
-                    .avatar{
-                        font-size: 1rem;
-                        font-weight: 500;
-                        text-decoration: underline;
-                    }
-                }
-            }
+.log {
+  gap: 0.4rem;
+  display: flex;
+  flex-direction: column;
+}
 
-            .loading {
-                position: absolute;
-                left: 50%;
-                transform: translateX(-50%);
-                bottom: 4rem;
-            }
-        }
+.avatar {
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: underline;
+}
 
-        .inputWrapper form {
-            display: flex;
-            gap: 0.5rem;
-        }
-    }
+.loading {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 4rem;
+}
+
+.inputWrapper form {
+  display: flex;
+  gap: 0.5rem;
 }

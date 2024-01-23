@@ -1,7 +1,7 @@
 'use client';
 import React, { FC } from 'react';
 import styles from './index.module.css';
-import { Grid } from '@mui/material';
+import { Container, Grid } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import Image from 'next/image';
 import Paper from '@mui/material/Paper';
@@ -23,45 +23,64 @@ const Item = styled(Paper)(({ theme }) => ({
  */
 const Footer: FC<FooterProps> = props => {
   return (
-    <div className={styles.footerWrapper}>
-      <div className={styles.content}>
-        <Grid container spacing={2}>
-          <Grid item xs={2}>
-            <Item style={{ textAlign: 'center' }}>
-              <Image width={200} height={200} src="/images/site/landing/landing-logo.png" alt="landing-logo" />
-              <div className={styles.globalTitle}>OpenSand</div>
+    <Container maxWidth="lg">
+      <div style={{ margin: '3rem 0' }}>
+        <Grid container spacing={3}>
+          <Grid item xs={12} md={2}>
+            <Item
+              style={{
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'center',
+                textAlign: 'center',
+                padding: 0,
+              }}
+            >
+              <Image
+                width={200}
+                height={200}
+                layout="responsive"
+                src="/images/site/landing/landing-logo.png"
+                alt="landing-logo"
+              />
             </Item>
           </Grid>
-          <Grid item xs={10}>
+          <Grid item xs={12} md={10}>
             <Item>
               <div className={styles.linkWrapper}>
-                <div className={styles.left}>
-                  <div className={styles.title}>{appConfigList.title}</div>
-                  {appConfigList.children.map((item, index) => (
-                    <Link href={item.link} key={item.key} className={styles.customLink}>
-                      - <span style={{ marginLeft: 10 }}>{item.title}</span>
-                    </Link>
-                  ))}
-                  <div className={styles.title}>{socialConfigList.title}</div>
-                  {socialConfigList.children.map((item, index) => (
-                    <Link href={item.link} key={item.key} className={styles.customLink}>
-                      - <span style={{ marginLeft: 10 }}>{item.title}</span>
-                    </Link>
-                  ))}
-                </div>
-                <div className={styles.right}>
-                  {routeConfigList.children.map((item, index) => (
-                    <Link href={item.link} key={item.key} className={styles.customLink}>
-                      <span>{item.title}</span>
-                    </Link>
-                  ))}
-                </div>
+                <Grid container spacing={0}>
+                  <Grid item xs={12} md={6}>
+                    <div className={styles.title}>{appConfigList.title}</div>
+                    {appConfigList.children.map((item, index) => (
+                      <Link href={item.link} key={item.key} className={styles.customLink}>
+                        - <span style={{ marginLeft: 10 }}>{item.title}</span>
+                      </Link>
+                    ))}
+                    <div className={styles.title}>{socialConfigList.title}</div>
+                    {socialConfigList.children.map((item, index) => (
+                      <div style={{ marginBottom: 20 }}>
+                        <Link href={item.link} key={item.key} className={styles.customLink}>
+                          - <span style={{ marginLeft: 10 }}>{item.title}</span>
+                        </Link>
+                      </div>
+                    ))}
+                  </Grid>
+                  <Grid item xs={12} md={6}>
+                    {routeConfigList.children.map((item, index) => (
+                      <div style={{ marginBottom: 20 }}>
+                        <Link href={item.link} key={item.key} className={styles.customLink}>
+                          - <span>{item.title}</span>
+                        </Link>
+                      </div>
+                    ))}
+                  </Grid>
+                </Grid>
               </div>
             </Item>
           </Grid>
         </Grid>
       </div>
-    </div>
+    </Container>
   );
 };
 

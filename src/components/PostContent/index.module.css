@@ -26,4 +26,10 @@
       padding: var(--size-8);
     }
   }
+
+  @media (max-width: 768px) {
+    .content {
+      width: 100%;
+    }
+  }
   

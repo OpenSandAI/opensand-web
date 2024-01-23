@@ -4,9 +4,9 @@ export const appConfigList = {
   title: 'Apps',
   children: [
     {
-      key: 'chatGPT',
-      title: 'chatGPT',
-      link: 'chatGPT',
+      key: 'chat',
+      title: 'Chat',
+      link: 'chat',
     },
   ],
 };
@@ -17,14 +17,14 @@ export const socialConfigList = {
   title: 'Social',
   children: [
     {
-      key: 'discard',
-      title: 'Discard',
-      link: 'discard',
+      key: 'discord',
+      title: 'Discord',
+      link: 'https://discord.com/',
     },
     {
       key: 'twitter',
       title: 'Twitter',
-      link: 'twitter',
+      link: 'https://twitter.com/',
     },
   ],
 };
@@ -51,7 +51,7 @@ export const routeConfigList = {
     },
     {
       key: 'ContactUS',
-      title: 'Contact US',
+      title: 'Contact Us',
       link: 'contact',
     },
   ],

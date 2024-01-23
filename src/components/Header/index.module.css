@@ -13,14 +13,11 @@
 
 .logo {
   font-size: 1.5rem;
-  color: white;
-  font-family: 'Fira', sans-serif;
-  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #dcf8bd;
 }
+
 .logo a {
   display: flex;
   align-items: center;
@@ -28,22 +25,46 @@
 
 .logo a {
   text-decoration: none;
-  color: #dcf8bd;
+  color: #54ae8c;
 }
+
 .navigation {
   display: flex;
-  gap: 30px;
+  gap: 2rem;
+}
+
+@media (max-width: 1304px) {
+  .header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 12rem;
+  }
+  .logo {
+    margin-bottom: 0.5rem;
+  }
+
+  .navigation {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .navigation ul li a {
+    font-size: 1.2rem;
+  }
 }
 
 .navigation a {
   text-decoration: none;
-  color: #dcf8bd;
+  color: #54ae8c;
   font-size: 1rem;
 }
 
 @media (min-width: 768px) {
   .logo {
     font-size: 2.5rem;
+    line-height: 1;
   }
 
   .navigation a {

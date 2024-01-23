@@ -1,53 +1,36 @@
-.heroSection {
-  max-width: 80rem;
-  margin: 0 auto;
-  .heroContent {
-    position: relative;
-    z-index: 2;
-    margin-top: 15rem;
-    width: 100%;
-    max-width: 49.0625rem;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    .header {
-      width: 100%;
-      font-size: 5.5rem;
-      font-weight: 600;
-      line-height: 1.1;
-      color: #dcf8bd;
-      .subHeader {
-        margin-left: 3rem;
-      }
-    }
-    .content {
-      font-size: 1.5rem;
-      color: #fff;
-    }
+.heroContent {
+  margin-top: 20rem;
+  
+}
 
-    .landingLogo {
-      position: absolute;
-      z-index: -1;
-      right: -40rem;
-      top: -10rem;
-    }
+.header {
+  width: 100%;
+  line-height: 1.1;
+  font-weight: 600;
+  color: #dcf8bd;
+}
 
-    .buttonGroup {
-      margin-top: 3rem;
-      font-size: 1.25rem;
-      display: flex;
-      gap: 2rem;
-      .button {
-        border-radius: 999px;
-        cursor: pointer;
-        background-color: #dcf8bd;
-        color: #000;
-        font-size: 1.5rem;
-        border: 0;
-        padding: 9px 15px;
-        text-decoration: none;
-        display: inline-block;
-      }
-    }
-  }
+.content {
+  font-size: 1.5rem;
+  line-height: 1.5;
+  color: #fff;
+}
+
+.buttonGroup {
+  margin-top: 3rem;
+  font-size: 1rem;
+  display: flex;
+  gap: 2rem;
+}
+
+.button {
+  border-radius: 999px;
+  cursor: pointer;
+  background-color: #dcf8bd;
+  color: #000;
+  font-size: 1.2rem;
+  border: 0;
+  padding: 9px 10px;
+  text-decoration: none;
+  display: inline-block;
 }

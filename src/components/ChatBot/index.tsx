@@ -3,7 +3,7 @@ import React, { FormEvent, useCallback, useEffect, useRef, useState } from 'reac
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import rehypeHighlight from 'rehype-highlight';
-import { Button, CircularProgress, IconButton, Input } from '@mui/material';
+import { Button, CircularProgress, Container, IconButton, Input } from '@mui/material';
 import Image from 'next/image';
 import { Log, Message } from './types.d';
 import { useLocalStorage } from '@/utils/hooks';
@@ -22,7 +22,7 @@ const enum Role {
 const ChatBot = () => {
   const [loading, setLoading] = useState(false);
 
-  const { setStorageItem, getStorageItem,removeStorageItem } = useLocalStorage();
+  const { setStorageItem, getStorageItem, removeStorageItem } = useLocalStorage();
   const cacheLogs = getStorageItem('chatLogs');
   const [logs, setLogs] = useState<Log[]>(() => []);
   const [question, setQuestion] = useState('');
@@ -75,9 +75,9 @@ const ChatBot = () => {
           acc += cur?.delta?.content ?? '';
           return acc;
         }, '');
-      } catch (error){
+      } catch (error) {
         // Ignore
-        console.error('error happen',error);
+        console.error('error happen', error);
       }
 
       contents += content;
@@ -111,64 +111,66 @@ const ChatBot = () => {
 
   const handleLogClean = () => {
     setLogs([]);
-  }
+  };
 
   return (
-    <div className={styles.main}>
-      <div className={styles.chatWrapper}>
-        <div className={styles.chatTitle}>
-          <Image
-            width={40}
-            style={{ marginLeft: 30 }}
-            height={40}
-            className={styles.image}
-            src="/images/site/apps/chat-icon.svg"
-            alt="landing-logo"
-          />
-          <span>OpenSand Chat</span>
-        </div>
-        <div className={styles.chat}>
-          {loading && (
-            <div className={styles.loading}>
-              <CircularProgress color="secondary" variant="indeterminate" />
-            </div>
-          )}
-
-          <div className={styles.logs}>
-            {logs.map(l => (
-              <div key={l.id} className={styles.log}>
-                <div className={styles.avatar}>{l.role === 'user' ? 'User:' : 'OpenSand:'}</div>
-                <div className={l.answering ? '' : styles.streaming}>
-                  <ReactMarkdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeHighlight]}>
-                    {l.answering ? answeringContent : l.content}
-                  </ReactMarkdown>
-                </div>
-              </div>
-            ))}
+    <Container maxWidth="lg">
+      <div className={styles.main}>
+        <div className={styles.chatWrapper}>
+          <div className={styles.chatTitle}>
+            <Image
+              width={40}
+              height={40}
+              style={{ marginLeft: 30 }}
+              className={styles.image}
+              src="/images/site/apps/chat-icon.svg"
+              alt="landing-logo"
+            />
+            <span>OpenSand Chat</span>
           </div>
-          <div className={styles.inputWrapper}>
-            <form onSubmit={onSubmit}>
-              <IconButton onClick={handleLogClean} color="secondary"  aria-label="refresh">
-                <RefreshIcon />
-              </IconButton>
-              <Input
-                autoFocus
-                fullWidth
-                placeholder="Please enter your question"
-                value={question}
-                onChange={e => {
-                  setQuestion(e.target.value);
-                }}
-                inputProps={ariaLabel}
-              />
-              <Button type="submit" disabled={loading} variant="contained">
-                Send
-              </Button>
-            </form>
+          <div className={styles.chat}>
+            {loading && (
+              <div className={styles.loading}>
+                <CircularProgress color="secondary" variant="indeterminate" />
+              </div>
+            )}
+
+            <div className={styles.logs}>
+              {logs.map(l => (
+                <div key={l.id} className={styles.log}>
+                  <div className={styles.avatar}>{l.role === 'user' ? 'User:' : 'OpenSand:'}</div>
+                  <div className={l.answering ? '' : styles.streaming}>
+                    <ReactMarkdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeHighlight]}>
+                      {l.answering ? answeringContent : l.content}
+                    </ReactMarkdown>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div className={styles.inputWrapper}>
+              <form onSubmit={onSubmit}>
+                <IconButton onClick={handleLogClean} color="secondary" aria-label="refresh">
+                  <RefreshIcon />
+                </IconButton>
+                <Input
+                  autoFocus
+                  fullWidth
+                  placeholder="Please enter your question"
+                  value={question}
+                  onChange={e => {
+                    setQuestion(e.target.value);
+                  }}
+                  inputProps={ariaLabel}
+                />
+                <Button type="submit" disabled={loading} variant="contained">
+                  Send
+                </Button>
+              </form>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </Container>
   );
 };
 

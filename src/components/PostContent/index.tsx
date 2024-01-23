@@ -30,7 +30,15 @@ const PostContent = ({ post }: { post: any }) => {
 
       return <p>{paragraph.children}</p>;
     },
-
+    image: (props: any) => {
+      const { src, alt, title, url } = props;
+      return (
+        <div className="custom-image">
+          <img src={src} alt={alt} title={title} />
+          <div className="caption">{title}</div>
+        </div>
+      );
+    },
     code(code: any) {
       const { language, value } = code;
       return <SyntaxHighlighter style={atomDark} language={language} children={value} />;
