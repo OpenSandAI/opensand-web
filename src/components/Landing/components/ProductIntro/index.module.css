@@ -32,15 +32,14 @@
 
 .operation {
   display: flex;
-  justify-content: flex-end;
   margin-top: 3rem;
 }
 
 .button {
   border-radius: 999px;
   cursor: pointer;
-  background-color: #dcf8bd;
-  color: #000;
+  background-color: rgba(0, 230, 137, 1);
+  color: #FFF;
   padding: 1rem 2rem;
   font-size: 1.5rem;
   text-decoration: none;

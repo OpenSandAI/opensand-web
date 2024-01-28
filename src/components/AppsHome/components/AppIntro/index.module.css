@@ -1,15 +1,5 @@
-.appContent {
-  margin-top: 15rem;
-}
-
-.title {
-  font-weight: 600;
-  margin-bottom: 3rem;
-  color: #dcf8bd;
-}
-
 .image {
-  border-radius: 25px;
+  border-radius: 2rem;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 1px 12px 2px rgba(0, 0, 0, 0.2);
 }
 .rightTitle {
@@ -32,11 +22,11 @@
 .button {
   margin-left: 6rem;
   border-radius: 999px;
+  float: right;
   cursor: pointer;
-  background-color: #dcf8bd;
-  color: #000;
+  background-color: rgba(0, 230, 137, 1);
+  color: #FFF;
   padding: 1rem 2rem;
   font-size: 1.5rem;
   text-decoration: none;
-  display: inline-block;
 }

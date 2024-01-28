@@ -1,27 +1,23 @@
 /** 导航链接 */
 export const NAVIGATION_LIST = [
   {
-    name: 'Apps',
+    name: 'APPS',
     path: 'apps',
   },
   {
-    name: 'Whitepaper',
+    name: 'WHITEPAPER',
     path: 'whitepaper',
   },
   {
-    name: 'Milestone',
+    name: 'MILESTONE/ROADMAP',
     path: 'milestone',
   },
   {
-    name: 'About',
+    name: 'ABOUT',
     path: 'about',
   },
   {
-    name: 'Contact Us',
+    name: 'CONTACT US',
     path: 'contactUs',
-  },
-  {
-    name: 'Login',
-    path: '',
   },
 ];

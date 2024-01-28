@@ -4,11 +4,11 @@
   z-index: 999;
   top: 0px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   padding: 1rem 10%;
   height: 6rem;
-  background-color: #202020;
+  background: rgba(27, 91, 81, 1);
 }
 
 .logo {
@@ -30,7 +30,24 @@
 
 .navigation {
   display: flex;
-  gap: 2rem;
+  gap: 3rem;
+  position: relative;
+}
+
+.navigation a {
+  text-decoration: none;
+  color: #FFF;
+  font-size: 1rem;
+}
+
+.button {
+  border-radius: 999px;
+  cursor: pointer;
+  color: #fff;
+  background-color: rgba(0, 230, 137, 1);
+  padding: 1rem 2rem;
+  font-size: 1.4rem;
+  text-decoration: none;
 }
 
 @media (max-width: 1304px) {
@@ -53,12 +70,9 @@
   .navigation ul li a {
     font-size: 1.2rem;
   }
-}
-
-.navigation a {
-  text-decoration: none;
-  color: #54ae8c;
-  font-size: 1rem;
+  .button {
+   display: none;
+  }
 }
 
 @media (min-width: 768px) {
@@ -70,4 +84,5 @@
   .navigation a {
     font-size: 1.5rem;
   }
+  
 }

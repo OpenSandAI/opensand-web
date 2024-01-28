@@ -1,65 +1,60 @@
 import React, { FC } from 'react';
 import Image from 'next/image';
 import { Box, Container, Grid, Typography } from '@mui/material';
-import styles from './index.module.css';
 
 interface HeroIntroProps {}
 
 /**
- * You can describle the component here
+ * landing页-首屏
  */
 const HeroIntro: FC<HeroIntroProps> = props => {
   return (
     <Container maxWidth="lg">
-      <div className={styles.heroContent}>
+      <Box sx={{ marginTop: '20rem' }}>
         <Grid container spacing={0}>
-          <Grid item xs={12} md={10}>
+          <Grid item xs={12} md={12}>
             <Typography
               component="div"
               sx={{
-                fontSize: { xs: 50, md: 90 },
+                fontSize: { xs: 50, md: 75 },
                 letterSpacing: 1.5,
                 lineHeight: 1.3,
-                color: '#dcf8bd',
+                color: '#fff',
                 fontWeight: 600,
               }}
             >
-              The Best
-              <br />
-              <span style={{ marginLeft: '3rem' }}>
-                AI System of <br />
-                <span style={{ color: '#fff', marginLeft: '3rem' }}>Generative Content</span>
-              </span>
+              <div>
+                An Oasis of <span style={{ color: 'rgba(0, 230, 137, 1)' }}>Openness</span>
+              </div>
+              <div>Building the Path to Trustworthy</div>
+              <div>AGI Together</div>
             </Typography>
+          </Grid>
+          <Grid item xs={12} md={9}>
             <Typography
               component="div"
               sx={{
                 width: '100%',
-                fontSize: '1rem',
+                fontSize: '1.5rem',
                 lineHeight: 1.5,
+                marginTop: '2rem',
                 color: '#fff',
               }}
             >
-              Build anything you want, any way you want on the lightning fast, scalable blockchain that won’t let you
-              down. Choosing the wrong blockchain can kill your dApp before it ever has a chance to succeed, but it
-              doesn’t have to be this way. Launch with confidence on Avalanche.
+              AGI is approaching, but there's no surefire guarantee that it will benefit humanity. That could change
+              with OpenSand, a project where we strengthen AGI using an open source blockchain under a united global
+              effort. In the OpenSand community, we're dedicated to creating a path towards trustworthy, transparent,
+              and ethical AGI. OpenSand's mission is to make sure we do more than living; we aim to thrive in an
+              entirely new ecosystem of excitement.
             </Typography>
           </Grid>
-          <Grid item xs={12} md={2}>
-            <Box sx={{ position: {sx:'static', md: 'relative'}, zIndex: -1, left: { xs: -50, md: -200 }, top: { xs: 0, md: -100 } }}>
-              <Image width={400} height={400} src="/images/site/landing/tech-block.png" alt="landing-logo" />
+          <Grid item xs={12} md={3}>
+            <Box sx={{ zIndex: -1 }}>
+              <Image width={300} height={300} src="/images/site/landing/tech-block.png" alt="landing-logo" />
             </Box>
           </Grid>
         </Grid>
-        <div className={styles.buttonGroup}>
-          <a className={styles.button} href="/apps">
-            Get Started
-          </a>
-          <a className={styles.button} href="/whitepaper">
-            New to Web3?
-          </a>
-        </div>
-      </div>
+      </Box>
     </Container>
   );
 };

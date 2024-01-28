@@ -9,54 +9,58 @@ const ProductIntro: FC<ProductIntroProps> = props => {
   return (
     <Container maxWidth="lg">
       <div className={styles.productContent}>
-        <Typography
-          component="div"
-          sx={{
-            fontSize: { xs: 50, md: 90 },
-            fontWeight: 600,
-            marginBottom: '3rem',
-            lineHeight: 1.6,
-            color: '#dcf8bd',
-          }}
-        >
-          <span>Build It</span>
-          <br />
-          <span style={{ marginLeft: '3rem', color: '#fff' }}>Your way</span>
-        </Typography>
         <Grid container spacing={3}>
-          <Grid item xs={12} md={6}>
+          <Grid item xs={12} md={4}></Grid>
+          <Grid item xs={12} md={8}>
+            <Typography
+              component="div"
+              sx={{
+                fontSize: { xs: 50, md: 90 },
+                fontWeight: 600,
+                marginBottom: '1rem',
+                lineHeight: 1.6,
+                color: '#FFF',
+              }}
+            >
+              <span>BUILD IT</span>
+              <br />
+              <span style={{ marginLeft: '12rem', color: 'rgba(0, 230, 137, 1)' }}>YOUR</span> WAY
+            </Typography>
+          </Grid>
+          <Grid item xs={12} md={4}>
             <Image
-              width={500}
-              height={250}
-              layout="responsive"
+              width={300}
+              height={300}
               className={styles.image}
-              src="/images/site/landing/pexels-google.jpg"
+              src="/images/site/landing/tech-block.png"
               alt="landing-logo"
             />
           </Grid>
-          <Grid item xs={12} md={6}>
+          <Grid item xs={12} md={8}>
             <Box sx={{ mt: { xs: 5, md: 0 } }}>
               <Typography
                 component="div"
                 sx={{
-                  color: '#dcf8bd',
+                  color: '#FFF',
                   fontWeight: 500,
                   fontSize: '2rem',
-                  marginBottom: '3rem',
                 }}
               >
-                Avalanche has the advanced tooling you need to accelerate from idea to launch.
+                Cosmo Intellect
               </Typography>
               <Typography
                 component="div"
                 sx={{
                   color: '#fff',
                   lineHeight: 1.5,
-                  fontSize: '1.5rem',
+                  fontSize: '1.2rem',
                 }}
               >
-                Don’t miss out because it took too long to deploy on Mainnet. Take advantage of the low-code tooling and
-                configurability that makes it easy to launch your Web3 innovation in less than 60 seconds.
+                n this phase of the product, we will focus on building an open-source community where decision-making
+                authority and knowledge resources are shared with a broader group. It's a place where professionals from
+                various disciplines, including technology, academia, industry, and everyday enthusiasts, come together
+                to pool their wisdom to collectively explore and address complex AGI governance issues, ensuring a more
+                balanced and comprehensive understanding and management of AGI.
               </Typography>
               <div className={styles.operation}>
                 <a className={styles.button} href="/developer">
