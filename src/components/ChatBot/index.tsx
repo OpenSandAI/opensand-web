@@ -7,7 +7,8 @@ import { Button, CircularProgress, Container, IconButton, Input } from '@mui/mat
 import Image from 'next/image';
 import { Log, Message } from './types.d';
 import { useLocalStorage } from '@/utils/hooks';
-import RefreshIcon from '@mui/icons-material/Refresh';
+import SendIcon from '@mui/icons-material/Send';
+import CleaningServicesIcon from '@mui/icons-material/CleaningServices';
 import ask from './ask';
 import 'highlight.js/styles/vs2015.css';
 import styles from './index.module.css';
@@ -122,11 +123,10 @@ const ChatBot = () => {
               width={40}
               height={40}
               style={{ marginLeft: 30 }}
-              className={styles.image}
-              src="/images/site/apps/chat-icon.svg"
+              src="/images/site/apps/chatgpt.svg"
               alt="landing-logo"
             />
-            <span>OpenSand Chat</span>
+            <span>OpenSand</span>
           </div>
           <div className={styles.chat}>
             {loading && (
@@ -136,21 +136,30 @@ const ChatBot = () => {
             )}
 
             <div className={styles.logs}>
-              {logs.map(l => (
-                <div key={l.id} className={styles.log}>
-                  <div className={styles.avatar}>{l.role === 'user' ? 'User:' : 'OpenSand:'}</div>
-                  <div className={l.answering ? '' : styles.streaming}>
-                    <ReactMarkdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeHighlight]}>
-                      {l.answering ? answeringContent : l.content}
-                    </ReactMarkdown>
+              {logs.map(l => {
+                console.log('current l', l);
+                return (
+                  <div key={l.id} className={styles.log}>
+                    <div className={styles.avatar}>
+                      {l.role === 'user' ? (
+                        <Image width={40} height={40} src="/images/site/apps/user.svg" alt="landing-logo" />
+                      ) : (
+                        <Image width={40} height={40} src="/images/site/apps/chatgpt.svg" alt="landing-logo" />
+                      )}
+                    </div>
+                    <div className={styles.content}>
+                      <ReactMarkdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeHighlight]}>
+                        {l.answering ? answeringContent : l.content}
+                      </ReactMarkdown>
+                    </div>
                   </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
             <div className={styles.inputWrapper}>
               <form onSubmit={onSubmit}>
                 <IconButton onClick={handleLogClean} color="secondary" aria-label="refresh">
-                  <RefreshIcon />
+                  <CleaningServicesIcon />
                 </IconButton>
                 <Input
                   autoFocus
@@ -162,7 +171,7 @@ const ChatBot = () => {
                   }}
                   inputProps={ariaLabel}
                 />
-                <Button type="submit" disabled={loading} variant="contained">
+                <Button type="submit" color="secondary" disabled={loading} startIcon={<SendIcon />} variant="contained">
                   Send
                 </Button>
               </form>
