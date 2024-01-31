@@ -3,16 +3,16 @@ import { getPostData } from '@/utils';
 import styles from './index.module.css';
 import PostContent from '@/components/PostContent';
 
-const WhitePaper = () => {
+const MileStone = () => {
   const postData = getPostData('mileStone');
 
   return (
     <Fragment>
       <div className={styles.postWrapper}>
-        <PostContent post={postData} />
+        <PostContent type="milestone" post={postData} />
       </div>
     </Fragment>
   );
 };
 
-export default WhitePaper;
+export default MileStone;

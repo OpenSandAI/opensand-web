@@ -9,7 +9,7 @@ const WhitePaper = () => {
   return (
     <Fragment>
       <div className={styles.postWrapper}>
-        <PostContent post={postData} />
+        <PostContent type="whitepaper" post={postData} />
       </div>
     </Fragment>
   );

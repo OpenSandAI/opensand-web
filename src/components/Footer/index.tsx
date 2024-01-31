@@ -24,7 +24,7 @@ const Item = styled(Paper)(({ theme }) => ({
 const Footer: FC<FooterProps> = props => {
   return (
     <Container maxWidth="lg">
-      <div style={{ margin: '3rem 0' }}>
+      <div style={{ margin: '15rem 0 5rem 0' }}>
         <Grid container spacing={3}>
           <Grid item xs={12} md={2}>
             <Item
@@ -58,7 +58,7 @@ const Footer: FC<FooterProps> = props => {
                     ))}
                     <div className={styles.title}>{socialConfigList.title}</div>
                     {socialConfigList.children.map((item, index) => (
-                      <div style={{ marginBottom: 20 }}>
+                      <div style={{ marginBottom: 20 }} key={item.key}>
                         <Link href={item.link} key={item.key} className={styles.customLink}>
                           - <span style={{ marginLeft: 10 }}>{item.title}</span>
                         </Link>
@@ -67,7 +67,7 @@ const Footer: FC<FooterProps> = props => {
                   </Grid>
                   <Grid item xs={12} md={6}>
                     {routeConfigList.children.map((item, index) => (
-                      <div style={{ marginBottom: 20 }}>
+                      <div style={{ marginBottom: 20 }} key={item.key}>
                         <Link href={item.link} key={item.key} className={styles.customLink}>
                           - <span>{item.title}</span>
                         </Link>

@@ -54,5 +54,3 @@ In conclusion, OpenSand represents a pioneering force in the convergence of AI a
 Include a comprehensive list of references and citations for the technologies, frameworks, and research that form the basis of OpenSand's approach.
 
 Note: This white paper is a generic template, and you may need to tailor it to match the specific details, technologies, and goals of OpenSand. Additionally, it's essential to ensure compliance with legal and regulatory requirements when discussing tokenomics and other aspects of the project.
-
-![Create routes via your file + folder structure](ai-blockchain.jpg)

@@ -18,31 +18,46 @@ const AppIntro: FC<AppIntroProps> = props => {
           }}
         >
           OpenSand
-          <span style={{ color: '#FFF',marginLeft:'1rem' }}>Chat</span>
+          <span style={{ color: '#FFF', marginLeft: '1rem' }}>Chat</span>
         </Box>
-          <Grid container spacing={3}>
-            <Grid item xs={12} md={5}>
-              <Image
-                width={400}
-                height={600}
-                layout="responsive"
-                className={styles.image}
-                src="/images/site/apps/apps-description.png"
-                alt="landing-logo"
-              />
-            </Grid>
-            <Grid item xs={12} md={7}>
-              <div className={styles.rightTitle}>App Name:&nbsp; ChatGPT</div>
-              <div className={styles.rightContent}>
-                Description:
-                <br />
-                ChatGPT is a natural language processing tool driven by AI technology that allows you to have human-like
-                conversations and much more with the chatbot. The language model can answer questions and assist you
-                with tasks, such as composing emails, essays, and code.
-              </div>
-            </Grid>
+        <Grid container spacing={0} alignContent={'center'} justifyContent={'center'}>
+          <Grid item xs={12} md={5}>
+            <Image
+              width={400}
+              height={300}
+              className={styles.image}
+              src="/images/site/apps/apps-description.png"
+              alt="landing-logo"
+            />
           </Grid>
-
+          <Grid item xs={12} md={7}>
+            <Box
+              sx={{
+                fontSize: '2.5rem',
+                marginTop: '2rem',
+                fontWeight: 500,
+                color: '#fff',
+              }}
+            >
+              App Name:&nbsp; ChatGPT
+            </Box>
+            <Box
+              sx={{
+                fontWeight: 500,
+                color: '#fff',
+                fontSize: '1.2rem',
+                lineHeight: 1.5,
+                marginTop: '3rem',
+              }}
+            >
+              Description:
+              <br />
+              ChatGPT is a natural language processing tool driven by AI technology that allows you to have human-like
+              conversations and much more with the chatbot. The language model can answer questions and assist you with
+              tasks, such as composing emails, essays, and code.
+            </Box>
+          </Grid>
+        </Grid>
         <div className={styles.operation}>
           <a className={styles.button} href="/chat">
             Open Now

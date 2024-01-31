@@ -1,39 +1,40 @@
-
 .header {
-    padding-bottom: var(--size-8);
-    border-bottom: 8px solid var(--color-primary-default);
-    margin: var(--size-4) 0;
-    display: flex;
-    flex-direction: column-reverse;
-    justify-content: space-between;
-    align-items: center;
-    gap: 1rem;
-  }
-  
+  display: flex;
+  background-image: url('/images/site/landing/blockchain-ai.jpg');
+  background-position: right bottom;
+  background-size: cover;
+  align-items: center;
+  position: relative;
+  height: 25rem;
+}
+
+.header h1 {
+  font-size: var(--size-8);
+  color: #fff;
+  line-height: initial;
+  margin-left: 3rem;
+  font-size: 5rem;
+  text-align: center;
+}
+
+.arthur {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  color: #fff;
+}
+
+.arthurImage {
+  border-radius: 100%;
+  border: 2px solid #fff;
+  margin-right: 0.5rem;
+  margin-bottom: -0.5rem;
+}
+
+@media (max-width: 768px) {
   .header h1 {
-    font-size: var(--size-8);
-    color: var(--color-secondary-default);
-    margin: 0;
-    line-height: initial;
-    text-align: center;
+    margin-left: 1rem;
+    font-size: 3rem;
+    margin-top: 10rem;
   }
-  
-  .header img {
-    object-fit: cover;
-    width: 200px;
-    height: 120px;
-  }
-  
-  @media (min-width: 768px) {
-    .header {
-      margin: var(--size-8) 0;
-      flex-direction: row;
-      align-items: flex-end;
-    }
-  
-    .header h1 {
-      font-size: var(--size-16);
-      text-align: left;
-    }
-  }
-  
+}

@@ -1,18 +1,16 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { getPostData } from '@/utils';
 import styles from './index.module.css';
 import PostContent from '@/components/PostContent';
 
-const WhitePaper = () => {
+const About = () => {
   const postData = getPostData('about');
 
   return (
-    <Fragment>
-      <div className={styles.postWrapper}>
-        <PostContent post={postData} />
-      </div>
-    </Fragment>
+    <div className={styles.postWrapper}>
+      <PostContent type="about" post={postData} />
+    </div>
   );
 };
 
-export default WhitePaper;
+export default About;

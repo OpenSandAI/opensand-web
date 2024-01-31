@@ -35,6 +35,3 @@ Feedback Loop: Establish an effective feedback loop to collect insights from use
 Following the alpha release, OpenSand will focus on refining the platform based on user feedback, expanding the range of AI services, and initiating additional partnerships. The company will also work towards the beta release, aiming for broader adoption and integration across diverse industries.
 
 Note: The specific details of milestones should be tailored according to OpenSand's roadmap, goals, and technological advancements at the time of the milestone achievement.
-
-
-![Alpha Release of OpenSand's AI-Blockchain Integration Platform](milestone.png)

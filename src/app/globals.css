@@ -1,5 +1,7 @@
 * {
   box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
 }
 
 body {
@@ -51,7 +53,6 @@ h6 {
 }
 
 ul {
-  list-style: none;
   margin: 0;
   padding: 0;
 }

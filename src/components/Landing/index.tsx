@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import styles from './index.module.css';
 import HeroIntro from './components/HeroIntro';
 import ProductIntro from './components/ProductIntro';
-import AIIntro from './components/AIIntro';
+import FeatureIntro from './components/FeatureIntro';
 
 interface LandingProps {}
 
@@ -11,7 +11,7 @@ const Landing: FC<LandingProps> = props => {
     <div className={styles.landing}>
       <HeroIntro />
       <ProductIntro />
-      <AIIntro />
+      <FeatureIntro/>
     </div>
   );
 };
