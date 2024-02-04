@@ -1,15 +1,3 @@
-/** 应用配置 */
-export const appConfigList = {
-  key: 'app',
-  title: 'Apps',
-  children: [
-    {
-      key: 'chatgpt',
-      title: 'ChatGPT',
-      link: 'chat',
-    },
-  ],
-};
 
 /** 路由配置 */
 export const routeConfigList = {
@@ -17,24 +5,34 @@ export const routeConfigList = {
   title: 'route',
   children: [
     {
-      key: 'Whitepaper',
-      title: 'Whitepaper',
-      link: 'whitepaper',
+      key: 'OpenSand',
+      title: 'OpenSand',
+      link: '/',
     },
     {
-      key: 'Roadmap',
+      key: 'Social',
+      title: 'Social',
+      link: '/',
+    },
+    {
+      key: 'WhitePaper',
+      title: 'WhitePaper',
+      link: '/whitepaper',
+    },
+    {
+      key: 'RoadMap',
       title: 'Roadmap',
-      link: 'roadmap',
+      link: '/roadmap',
     },
     {
       key: 'About',
       title: 'About',
-      link: 'about',
+      link: '/about',
     },
     {
-      key: 'ContactUS',
+      key: 'Contact US',
       title: 'Contact Us',
-      link: 'contact',
+      link: '/contact',
     },
   ],
 };

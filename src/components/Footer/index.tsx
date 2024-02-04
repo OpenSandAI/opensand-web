@@ -1,11 +1,11 @@
 'use client';
 import React, { FC } from 'react';
 import styles from './index.module.css';
-import { Container, Grid } from '@mui/material';
+import { Container, Grid, Typography } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import Image from 'next/image';
 import Paper from '@mui/material/Paper';
-import { appConfigList, routeConfigList } from './utils';
+import { routeConfigList } from './utils';
 import Link from 'next/link';
 
 interface FooterProps {}
@@ -24,51 +24,66 @@ const Item = styled(Paper)(({ theme }) => ({
 const Footer: FC<FooterProps> = props => {
   return (
     <Container maxWidth="lg">
-      <div style={{ margin: '15rem 0 5rem 0' }}>
-        <Grid container spacing={3}>
-          <Grid item xs={12} md={2}>
-            <Item
-              style={{
+      <div style={{ margin: '15rem 0 15rem 0' }}>
+        <Grid container spacing={25}>
+          <Grid style={{ display: 'flex' }} item xs={12} md={2}>
+            <Typography
+              component="div"
+              sx={{
+                width: 60,
+                height: 60,
+                borderRadius: '100%',
+                backgroundColor: '#FFF',
                 display: 'flex',
-                flexDirection: 'column',
                 justifyContent: 'center',
-                textAlign: 'center',
-                padding: 0,
+                alignItems: 'center',
+                padding: '0.8rem',
               }}
             >
-              <Image
-                width={200}
-                height={200}
-                layout="responsive"
-                src="/images/site/landing/landing-logo.png"
-                alt="landing-logo"
-              />
-            </Item>
+              <Image width={50} height={50} src="/images/site/landing/landing-logo.png" alt="landing-logo" />
+            </Typography>
+            <Typography
+              component="span"
+              sx={{
+                fontSize: 25,
+                paddingLeft: 2,
+                paddingTop: 1.5,
+                color: '#fff',
+              }}
+            >
+              OpenSand
+            </Typography>
           </Grid>
           <Grid item xs={12} md={10}>
-            <Item>
-              <div className={styles.linkWrapper}>
-                <Grid container spacing={0}>
-                  <Grid item xs={12} md={6}>
-                    <div className={styles.title}>{appConfigList.title}</div>
-                    {appConfigList.children.map((item, index) => (
-                      <Link href={item.link} key={item.key} className={styles.customLink}>
-                        - <span style={{ marginLeft: 10 }}>{item.title}</span>
+            <div className={styles.linkWrapper}>
+              {routeConfigList.children.map((item, index) => (
+                <div className={styles.linkItem}>
+                  <Link href={item.link} key={item.key} className={styles.customLink}>
+                    <span>{item.title}</span>
+                  </Link>
+                  {item.title === 'OpenSand' && (
+                    <Link href="/chat" key="ChatGPT" className={styles.dropLink}>
+                      ChatGPT
+                    </Link>
+                  )}
+                  {item.title === 'Social' && (
+                    <>
+                      <Link
+                        target="_blank"
+                        href="https://twitter.com/opensandai"
+                        key="twitter"
+                        className={styles.dropLink}
+                      >
+                        Twitter
                       </Link>
-                    ))}
-                  </Grid>
-                  <Grid item xs={12} md={6}>
-                    {routeConfigList.children.map((item, index) => (
-                      <div style={{ marginBottom: 20 }} key={item.key}>
-                        <Link href={item.link} key={item.key} className={styles.customLink}>
-                          - <span>{item.title}</span>
-                        </Link>
-                      </div>
-                    ))}
-                  </Grid>
-                </Grid>
-              </div>
-            </Item>
+                      <Link target="_blank" href="https://discord.com/" key="discord" className={styles.dropLink}>
+                        Discord
+                      </Link>
+                    </>
+                  )}
+                </div>
+              ))}
+            </div>
           </Grid>
         </Grid>
       </div>
