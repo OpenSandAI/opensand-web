@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import Image from 'next/image';
 import styles from './index.module.css';
 
-type PostRouteType = 'whitepaper' | 'milestone' | 'about';
+type PostRouteType = 'whitepaper' | 'milestone' | 'about' | 'contact';
 
 interface PostHeaderProps {
   type: PostRouteType;
@@ -21,7 +21,7 @@ const PostHeader: FC<PostHeaderProps> = props => {
       {type === 'milestone' && (
         <h1>
           OpenSand <br />
-          <span style={{ color: '#2e5a51', marginLeft: '6rem' }}>Milestone</span>
+          <span style={{ color: '#2e5a51', marginLeft: '6rem' }}>Roadmap</span>
         </h1>
       )}
       {type === 'whitepaper' && (
@@ -30,11 +30,24 @@ const PostHeader: FC<PostHeaderProps> = props => {
           <span style={{ color: '#2e5a51', marginLeft: '6rem' }}> of OpenSand</span>
         </h1>
       )}
+      {type === 'contact' && (
+        <h1>
+          Contact Us
+        </h1>
+      )}
 
-      <div className={styles.arthur} >
-        <Image width={40} height={40} className={styles.arthurImage} src="/images/site/landing/tech-block.png" alt="arthur" />
-        Arthur: OpenSand
-      </div>
+      {type !== 'contact' && (
+        <div className={styles.arthur}>
+          <Image
+            width={40}
+            height={40}
+            className={styles.arthurImage}
+            src="/images/site/landing/tech-block.png"
+            alt="arthur"
+          />
+          Author: OpenSand
+        </div>
+      )}
     </header>
   );
 };

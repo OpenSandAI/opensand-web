@@ -7,7 +7,21 @@
   justify-content: space-evenly;
   align-items: center;
   height: 6rem;
-  background: rgba(27, 91, 81, 1);
+  background: #415555;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo a {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  font-size: 1.8rem;
+  gap: 1rem;
 }
 
 .button {
@@ -25,7 +39,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 8rem;
+    height: 7rem;
   }
 
   .button {
@@ -51,9 +65,9 @@
   font-size: 1.4rem;
 }
 
-.navList{
+.navList {
   display: flex;
-  gap: 3rem ;
+  gap: 3rem;
 }
 
 .navList a:hover {

@@ -4,27 +4,9 @@ export const appConfigList = {
   title: 'Apps',
   children: [
     {
-      key: 'chat',
-      title: 'Chat',
+      key: 'chatgpt',
+      title: 'ChatGPT',
       link: 'chat',
-    },
-  ],
-};
-
-/** 社交应用配置 */
-export const socialConfigList = {
-  key: 'social',
-  title: 'Social',
-  children: [
-    {
-      key: 'discord',
-      title: 'Discord',
-      link: 'https://discord.com/',
-    },
-    {
-      key: 'twitter',
-      title: 'Twitter',
-      link: 'https://twitter.com/',
     },
   ],
 };
@@ -40,9 +22,9 @@ export const routeConfigList = {
       link: 'whitepaper',
     },
     {
-      key: 'Milestone',
-      title: 'Milestone',
-      link: 'milestone',
+      key: 'Roadmap',
+      title: 'Roadmap',
+      link: 'roadmap',
     },
     {
       key: 'About',

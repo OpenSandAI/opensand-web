@@ -44,7 +44,7 @@ export const featureList = [
     title: 'Ommiscient Data',
     content: `In this phase of the product, our goal is ambitious - we plan to gather all knowledge that exists in various fields, multiple industries, and held by individuals with diverse expertise. By bringing together these vast and intricate pieces of knowledge into one comprehensive and unified system, we're setting the stage for the emergence of
     AGI. This consolidation is crucial for preparing us to fully harness the potential of AGI.`,
-    pictureUrl: '',
+    pictureUrl: '/images/site/landing/landing-tech-first.png',
   },
   {
     type: 'feature2',
@@ -90,7 +90,7 @@ export const featureList = [
     ),
     title: 'Conscious Genesis',
     content: `In this phase of our product, we are focused on ensuring thorough training and control of AGI. Our approach includes offering a robust suite of tools and algorithms specifically tailored for critical fields like machine learning, deep learning, reinforcement learning, natural language processing and fine-tuning. This will enable professional researchers within the community to conduct extensive experiments and research within a unified framework, fostering cross-disciplinary integration and collaboration.`,
-    pictureUrl: '',
+    pictureUrl: '/images/site/landing/landing-tech-secondary.png',
   },
   {
     type: 'feature3',
@@ -132,7 +132,7 @@ export const featureList = [
     ),
     title: 'Singularity Ne',
     content: `In the era of Internet 2.0, we're used to interacting through text and images, but this isn't enough for the age of AGI. The real revolution begins with reshaping the internet and the way we share information, using on-chain large language models (LLMs). Picture a world where your daily interactions, whether making friends, following people, or seeking business partners, are all facilitated by a dependable AGI assistant. This marks the dawn of a new ecosystem, where human connect, interact and syergize through the use of AGI.`,
-    pictureUrl: '',
+    pictureUrl: '/images/site/landing/landing-tech-third.png',
   },
 ];
 

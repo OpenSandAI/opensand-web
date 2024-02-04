@@ -32,7 +32,7 @@ const ProductIntro: FC<ProductIntroProps> = props => {
               width={300}
               height={300}
               className={styles.image}
-              src="/images/site/landing/tech-block.png"
+              src="/images/site/landing/landing-secondary.png"
               alt="landing-logo"
             />
           </Grid>
@@ -63,7 +63,7 @@ const ProductIntro: FC<ProductIntroProps> = props => {
                 balanced and comprehensive understanding and management of AGI.
               </Typography>
               <div className={styles.operation}>
-                <a className={styles.button} href="/developer">
+                <a className={styles.button} href="/apps">
                   Get Started
                 </a>
               </div>

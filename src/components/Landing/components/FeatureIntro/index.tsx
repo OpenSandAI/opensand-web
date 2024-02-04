@@ -21,8 +21,8 @@ const FeatureIntro: FC<FeatureIntroProps> = props => {
                 width={300}
                 height={300}
                 style={{ borderRadius: '25%' }}
-                src="/images/site/landing/pexels-google.jpg"
-                alt="pexels-google"
+                src={item.pictureUrl}
+                alt="landing-tech"
               />
             </Grid>
             <Grid item xs={12} md={8}>

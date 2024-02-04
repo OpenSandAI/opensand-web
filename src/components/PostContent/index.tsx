@@ -11,7 +11,7 @@ import PostHeader from '../PostHeader';
 SyntaxHighlighter.registerLanguage('js', js);
 SyntaxHighlighter.registerLanguage('css', css);
 
-type PostRouteType = 'whitepaper' | 'milestone' | 'about';
+type PostRouteType = 'whitepaper' | 'milestone' | 'about' | 'contact';
 
 const PostContent: FC<{ type: PostRouteType; post: any }> = ({ type, post }) => {
   const customRenderers = {

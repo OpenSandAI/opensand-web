@@ -10,7 +10,7 @@ interface HeroIntroProps {}
 const HeroIntro: FC<HeroIntroProps> = props => {
   return (
     <Container maxWidth="lg">
-      <Box sx={{ marginTop: '20rem' }}>
+      <Box sx={{ marginTop: '20rem'}}>
         <Grid container spacing={0}>
           <Grid item xs={12} md={12}>
             <Typography
@@ -50,7 +50,7 @@ const HeroIntro: FC<HeroIntroProps> = props => {
           </Grid>
           <Grid item xs={12} md={3}>
             <Box sx={{ zIndex: -1 }}>
-              <Image width={300} height={300} src="/images/site/landing/tech-block.png" alt="landing-logo" />
+              <Image width={300} height={300} src="/images/site/landing/landing-main.png" alt="landing-logo" />
             </Box>
           </Grid>
         </Grid>

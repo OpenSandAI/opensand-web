@@ -5,7 +5,7 @@ import { Container, Grid } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import Image from 'next/image';
 import Paper from '@mui/material/Paper';
-import { appConfigList, routeConfigList, socialConfigList } from './utils';
+import { appConfigList, routeConfigList } from './utils';
 import Link from 'next/link';
 
 interface FooterProps {}
@@ -55,14 +55,6 @@ const Footer: FC<FooterProps> = props => {
                       <Link href={item.link} key={item.key} className={styles.customLink}>
                         - <span style={{ marginLeft: 10 }}>{item.title}</span>
                       </Link>
-                    ))}
-                    <div className={styles.title}>{socialConfigList.title}</div>
-                    {socialConfigList.children.map((item, index) => (
-                      <div style={{ marginBottom: 20 }} key={item.key}>
-                        <Link href={item.link} key={item.key} className={styles.customLink}>
-                          - <span style={{ marginLeft: 10 }}>{item.title}</span>
-                        </Link>
-                      </div>
                     ))}
                   </Grid>
                   <Grid item xs={12} md={6}>
