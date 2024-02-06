@@ -57,3 +57,9 @@
 .customLink span:hover {
   text-decoration: underline;
 }
+
+.copyright{
+  margin-top: 3rem;
+  text-align: center;
+  color: #fff;
+}

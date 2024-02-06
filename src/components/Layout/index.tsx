@@ -2,6 +2,7 @@
 import React from 'react';
 import Header from '../Header';
 import Footer from '../Footer';
+import { MetaMaskProvider } from '@metamask/sdk-react';
 import { createTheme } from '@mui/material/styles';
 import { ThemeProvider } from '@mui/material';
 
@@ -18,10 +19,24 @@ const Layout = (props: { children: React.ReactNode }) => {
       },
     },
   });
+
+  const host = typeof window !== 'undefined' ? window.location.host : 'defaultHost';
+
+  const sdkOptions = {
+    logging: { developerMode: false },
+    checkInstallationImmediately: false,
+    dappMetadata: {
+      name: 'open-sand-app',
+      url: host,
+    },
+  };
+
   return (
     <body>
       <ThemeProvider theme={theme}>
-        <Header />
+        <MetaMaskProvider debug={false} sdkOptions={sdkOptions}>
+          <Header />
+        </MetaMaskProvider>
         {children}
         <Footer />
       </ThemeProvider>

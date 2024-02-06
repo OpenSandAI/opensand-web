@@ -37,13 +37,13 @@ const PostHeader: FC<PostHeaderProps> = props => {
       )}
 
       {type !== 'contact' && (
-        <div className={styles.arthur}>
+        <div className={styles.author}>
           <Image
             width={40}
             height={40}
-            className={styles.arthurImage}
-            src="/images/site/landing/tech-block.png"
-            alt="arthur"
+            className={styles.authorImage}
+            src="/images/site/landing/landing-logo.png"
+            alt="author"
           />
           Author: OpenSand
         </div>

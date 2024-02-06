@@ -1,13 +1,26 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Box, IconButton, Typography } from '@mui/material';
+import { Box, Button, IconButton, Typography } from '@mui/material';
 import { Menu } from '@mui/icons-material';
+import WalletIcon from '@mui/icons-material/Wallet';
 import MobileNav from './MobileNav';
+import { useSDK } from '@metamask/sdk-react';
+import { handleAccountSlice } from './utils';
 import styles from './index.module.css';
 
 const Header = () => {
   const [mobileNavVisible, setMobileNavVisible] = useState(false);
+  const { sdk, connected, connecting, account } = useSDK();
+
+  const connect = async () => {
+    try {
+      await sdk?.connect();
+    } catch (err) {
+      console.warn(`No accounts found`, err);
+    }
+  };
+
   return (
     <header className={styles.header}>
       <Box sx={{ ml: 'auto', display: { xs: 'inline-flex', md: 'none', position: 'absolute', top: 0, right: 0 } }}>
@@ -46,7 +59,7 @@ const Header = () => {
               <Link href="/whitepaper">WHITEPAPER</Link>
             </li>
             <li className={styles.linkItem}>
-              <Link href="/roadmap">MILESTONE/ROADMAP</Link>
+              <Link href="/roadmap">ROADMAP</Link>
             </li>
             <li className={styles.linkItem}>
               <Link href="/about">ABOUT</Link>
@@ -57,9 +70,15 @@ const Header = () => {
           </ul>
         </div>
       </Box>
-      <Link className={styles.button} href="/login">
-        Sign MetaMask
-      </Link>
+      {connected ? (
+        <Button startIcon={<WalletIcon />} className={styles.button}>
+          {handleAccountSlice(account)}
+        </Button>
+      ) : (
+        <Button startIcon={<WalletIcon />} disabled={connecting} onClick={connect} className={styles.button}>
+          Sign MetaMask
+        </Button>
+      )}
       {mobileNavVisible && <MobileNav mobileNavVisible={mobileNavVisible} setMobileNavVisible={setMobileNavVisible} />}
     </header>
   );
