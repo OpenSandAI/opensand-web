@@ -86,6 +86,7 @@ const Footer: FC<FooterProps> = props => {
             </div>
           </Grid>
         </Grid>
+        <div className={styles.copyright}>Copyright © 2024 OpenSand. All rights reserved.</div>
       </div>
     </Container>
   );

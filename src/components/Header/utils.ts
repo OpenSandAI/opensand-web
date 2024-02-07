@@ -21,3 +21,6 @@ export const MOBILE_NAVIGATION_LIST = [
     path: 'contact',
   },
 ];
+
+
+export const handleAccountSlice = (account: string| undefined) => account ? `${account.slice(0,4)}...${account.slice(-4)}` : ''
