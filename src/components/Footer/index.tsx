@@ -57,7 +57,7 @@ const Footer: FC<FooterProps> = props => {
           <Grid item xs={12} md={10}>
             <div className={styles.linkWrapper}>
               {routeConfigList.children.map((item, index) => (
-                <div className={styles.linkItem}>
+                <div key={item.key} className={styles.linkItem}>
                   <Link href={item.link} key={item.key} className={styles.customLink}>
                     <span>{item.title}</span>
                   </Link>

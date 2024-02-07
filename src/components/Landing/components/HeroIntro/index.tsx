@@ -10,7 +10,7 @@ interface HeroIntroProps {}
 const HeroIntro: FC<HeroIntroProps> = props => {
   return (
     <Container maxWidth="lg">
-      <Box sx={{ marginTop: '20rem'}}>
+      <Box sx={{ marginTop: '20rem' }}>
         <Grid container spacing={0}>
           <Grid item xs={12} md={12}>
             <Typography
@@ -24,10 +24,10 @@ const HeroIntro: FC<HeroIntroProps> = props => {
               }}
             >
               <div>
-                An Oasis of <span style={{ color: 'rgba(0, 230, 137, 1)' }}>Openness</span>
+                {`An Oasis of `}<span style={{ color: 'rgba(0, 230, 137, 1)' }}>{`Openness`}</span>
               </div>
-              <div>Building the Path to Trustworthy</div>
-              <div>AGI Together</div>
+              <div>{`Building the Path to Trustworthy`}</div>
+              <div>{`AGI Together`}</div>
             </Typography>
           </Grid>
           <Grid item xs={12} md={9}>
