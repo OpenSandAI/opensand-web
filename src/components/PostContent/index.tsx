@@ -19,13 +19,9 @@ const PostContent: FC<{ type: PostRouteType; post: any }> = ({ type, post }) => 
       const { children, className, node, ...rest } = props;
       const match = /language-(\w+)/.exec(className || '');
       return match ? (
-        <SyntaxHighlighter
-          {...rest}
-          PreTag="div"
-          children={String(children).replace(/\n$/, '')}
-          language={match[1]}
-          style={atomDark}
-        />
+        <SyntaxHighlighter {...rest} PreTag="div" language={match[1]} style={atomDark}>
+          {String(children).replace(/\n$/, '')}
+        </SyntaxHighlighter>
       ) : (
         <code {...rest} className={className}>
           {children}
@@ -33,7 +29,7 @@ const PostContent: FC<{ type: PostRouteType; post: any }> = ({ type, post }) => 
       );
     },
     p(props: any) {
-      return <p style={{ color: '#FFF',fontSize: '1.5rem', lineHeight: '1.5' }}>{props.children}</p>;
+      return <p style={{ color: '#FFF', fontSize: '1.5rem', lineHeight: '1.5' }}>{props.children}</p>;
     },
     h2(props: any) {
       return <h2 style={{ color: '#FFF' }}>{props.children}</h2>;

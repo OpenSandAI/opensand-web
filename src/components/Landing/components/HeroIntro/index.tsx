@@ -41,11 +41,11 @@ const HeroIntro: FC<HeroIntroProps> = props => {
                 color: '#fff',
               }}
             >
-              AGI is approaching, but there's no surefire guarantee that it will benefit humanity. That could change
+              {`AGI is approaching, but there's no surefire guarantee that it will benefit humanity. That could change
               with OpenSand, a project where we strengthen AGI using an open source blockchain under a united global
               effort. In the OpenSand community, we're dedicated to creating a path towards trustworthy, transparent,
               and ethical AGI. OpenSand's mission is to make sure we do more than living; we aim to thrive in an
-              entirely new ecosystem of excitement.
+              entirely new ecosystem of excitement.`}
             </Typography>
           </Grid>
           <Grid item xs={12} md={3}>

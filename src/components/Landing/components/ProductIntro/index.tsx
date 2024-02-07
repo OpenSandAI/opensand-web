@@ -56,11 +56,11 @@ const ProductIntro: FC<ProductIntroProps> = props => {
                   fontSize: '1.2rem',
                 }}
               >
-                n this phase of the product, we will focus on building an open-source community where decision-making
+                {`n this phase of the product, we will focus on building an open-source community where decision-making
                 authority and knowledge resources are shared with a broader group. It's a place where professionals from
                 various disciplines, including technology, academia, industry, and everyday enthusiasts, come together
                 to pool their wisdom to collectively explore and address complex AGI governance issues, ensuring a more
-                balanced and comprehensive understanding and management of AGI.
+                balanced and comprehensive understanding and management of AGI.`}
               </Typography>
               <div className={styles.operation}>
                 <a className={styles.button} href="/apps">

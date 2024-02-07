@@ -1,10 +1,11 @@
+'use client'
 import React, { FC } from 'react';
 import AppsHome from '@/components/AppsHome';
 
 interface AppsProps {
 }
 
-const Apps: FC<AppsProps> = props => {
+const apps: FC<AppsProps> = props => {
 
   return (
     <main>
@@ -13,4 +14,4 @@ const Apps: FC<AppsProps> = props => {
   );
 };
 
-export default Apps;
+export default apps;

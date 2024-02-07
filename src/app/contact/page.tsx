@@ -3,7 +3,7 @@ import { getPostData } from '@/utils';
 import styles from './index.module.css';
 import PostContent from '@/components/PostContent';
 
-const About = () => {
+const Contact = () => {
   const postData = getPostData('contact');
 
   return (
@@ -13,4 +13,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default Contact;
