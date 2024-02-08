@@ -137,7 +137,6 @@ const ChatBot = () => {
 
             <div className={styles.logs}>
               {logs.map(l => {
-                console.log('current l', l);
                 return (
                   <div key={l.id} className={styles.log}>
                     <div className={styles.avatar}>

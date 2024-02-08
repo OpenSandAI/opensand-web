@@ -24,7 +24,8 @@ const HeroIntro: FC<HeroIntroProps> = props => {
               }}
             >
               <div>
-                {`An Oasis of `}<span style={{ color: 'rgba(0, 230, 137, 1)' }}>{`Openness`}</span>
+                {`An Oasis of `}
+                <span style={{ color: 'rgba(0, 230, 137, 1)' }}>{`Openness`}</span>
               </div>
               <div>{`Building the Path to Trustworthy`}</div>
               <div>{`AGI Together`}</div>
@@ -49,7 +50,7 @@ const HeroIntro: FC<HeroIntroProps> = props => {
             </Typography>
           </Grid>
           <Grid item xs={12} md={3}>
-            <Box sx={{ zIndex: -1 }}>
+            <Box sx={{ zIndex: -1, textAlign: { xs: 'center', md: '' } }}>  
               <Image width={300} height={300} src="/images/site/landing/landing-main.png" alt="landing-logo" />
             </Box>
           </Grid>

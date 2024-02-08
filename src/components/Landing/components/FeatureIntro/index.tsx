@@ -15,15 +15,23 @@ const FeatureIntro: FC<FeatureIntroProps> = props => {
               {item.summary}
             </Grid>
           </Grid>
-          <Grid container direction={item.type=== 'feature2' ? 'row' : 'row-reverse'} justifyContent="center" alignItems="center" spacing={4}>
+          <Grid
+            container
+            direction={item.type === 'feature2' ? 'row' : 'row-reverse'}
+            justifyContent="center"
+            alignItems="center"
+            spacing={4}
+          >
             <Grid item xs={12} md={4}>
-              <Image
-                width={300}
-                height={300}
-                style={{ borderRadius: '25%' }}
-                src={item.pictureUrl}
-                alt="landing-tech"
-              />
+              <Box sx={{ textAlign: { xs: 'center', md: '' } }}>
+                <Image
+                  width={300}
+                  height={300}
+                  style={{ borderRadius: '25%' }}
+                  src={item.pictureUrl}
+                  alt="landing-tech"
+                />
+              </Box>
             </Grid>
             <Grid item xs={12} md={8}>
               <Typography component="div">

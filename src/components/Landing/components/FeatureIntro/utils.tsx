@@ -24,7 +24,7 @@ export const featureList = [
         <Typography
           component="div"
           sx={{
-            marginLeft: '3rem',
+            marginLeft: { xs: 0, md: '3rem' },
             fontSize: { xs: 60, md: 90 },
             color: 'rgba(0, 230, 137, 1)',
           }}
@@ -60,7 +60,7 @@ export const featureList = [
         <Typography
           component="div"
           sx={{
-            marginLeft: '12rem',
+            marginLeft: { xs: 0, md: '12rem' },
             fontSize: { xs: 60, md: 90 },
           }}
         >
@@ -69,7 +69,7 @@ export const featureList = [
         <Typography
           component="div"
           sx={{
-            marginLeft: '8rem',
+            marginLeft: { xs: 0, md: '8rem' },
             fontSize: { xs: 60, md: 90 },
           }}
         >

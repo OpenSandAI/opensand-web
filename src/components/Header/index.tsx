@@ -70,15 +70,22 @@ const Header = () => {
           </ul>
         </div>
       </Box>
-      {connected ? (
-        <Button startIcon={<WalletIcon />} className={styles.button}>
-          {handleAccountSlice(account)}
-        </Button>
-      ) : (
-        <Button startIcon={<WalletIcon />} disabled={connecting} onClick={connect} className={styles.button}>
-          Sign MetaMask
-        </Button>
-      )}
+      <Box
+        sx={{
+          display: { xs: 'none', md: 'inline-flex' },
+        }}
+      >
+        {connected ? (
+          <Button startIcon={<WalletIcon />} className={styles.button}>
+            {handleAccountSlice(account)}
+          </Button>
+        ) : (
+          <Button startIcon={<WalletIcon />} disabled={connecting} onClick={connect} className={styles.button}>
+            Sign MetaMask
+          </Button>
+        )}
+      </Box>
+
       {mobileNavVisible && <MobileNav mobileNavVisible={mobileNavVisible} setMobileNavVisible={setMobileNavVisible} />}
     </header>
   );

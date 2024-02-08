@@ -24,10 +24,11 @@ const ProductIntro: FC<ProductIntroProps> = props => {
             >
               <span>BUILD IT</span>
               <br />
-              <span style={{ marginLeft: '12rem', color: 'rgba(0, 230, 137, 1)' }}>YOUR</span> WAY
+              <span style={{ marginLeft: '10rem', color: 'rgba(0, 230, 137, 1)' }}>YOUR</span> WAY
             </Typography>
           </Grid>
           <Grid item xs={12} md={4}>
+            <Box sx={{textAlign: { xs: 'center', md: '' },}}>
             <Image
               width={300}
               height={300}
@@ -35,6 +36,8 @@ const ProductIntro: FC<ProductIntroProps> = props => {
               src="/images/site/landing/landing-secondary.png"
               alt="landing-logo"
             />
+            </Box>
+           
           </Grid>
           <Grid item xs={12} md={8}>
             <Box sx={{ mt: { xs: 5, md: 0 } }}>

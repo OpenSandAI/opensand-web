@@ -30,7 +30,6 @@ const TestApp: FC<AppsProps> = props => {
   const token =
     'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im9wZW5zYW5kIiwiaW5mbyI6eyJ0eXBlIjoic3RhZmYifSwiZXhwIjoxNzM4NzIwMDM5NjU4fQ.BJlzQM99gwcDSPWtjwbZf9_kDUlbtUv-uA-bKxFpQG0';
   const PostStream = async function () {
-    console.log('url', url);
     fetch(url, {
       method: 'POST',
       headers: {
@@ -64,7 +63,6 @@ const TestApp: FC<AppsProps> = props => {
             const jsonData = JSON.parse(data);
             // Handle the JSON data
             text += jsonData['choices'][0]['delta']['content'];
-            console.log(text);
           } catch (error) {
             console.error('Error parsing JSON chunk', error);
           }
