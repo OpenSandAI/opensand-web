@@ -11,7 +11,7 @@ const Landing: FC<LandingProps> = props => {
     <div className={styles.landing}>
       <HeroIntro />
       <ProductIntro />
-      <FeatureIntro/>
+      <FeatureIntro />
     </div>
   );
 };

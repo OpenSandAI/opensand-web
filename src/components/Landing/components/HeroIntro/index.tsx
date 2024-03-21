@@ -24,11 +24,13 @@ const HeroIntro: FC<HeroIntroProps> = props => {
               }}
             >
               <div>
-                {`An Oasis of `}
-                <span style={{ color: 'rgba(0, 230, 137, 1)' }}>{`Openness`}</span>
+                {`The Trustworthy `}
+                <span style={{ color: 'rgba(0, 230, 137, 1)' }}>{`AGI`}</span>
               </div>
-              <div>{`Building the Path to Trustworthy`}</div>
-              <div>{`AGI Together`}</div>
+              <div>
+                {`Governance `}
+                <span style={{ color: 'rgba(0, 230, 137, 1)' }}>{`Protocol˚`}</span>
+              </div>
             </Typography>
           </Grid>
           <Grid item xs={12} md={9}>
@@ -50,7 +52,7 @@ const HeroIntro: FC<HeroIntroProps> = props => {
             </Typography>
           </Grid>
           <Grid item xs={12} md={3}>
-            <Box sx={{ zIndex: -1, textAlign: { xs: 'center', md: '' } }}>  
+            <Box sx={{ zIndex: -1, textAlign: { xs: 'center', md: '' } }}>
               <Image width={300} height={300} src="/images/site/landing/landing-main.png" alt="landing-logo" />
             </Box>
           </Grid>
