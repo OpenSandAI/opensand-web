@@ -29,7 +29,7 @@ const HeroIntro: FC<HeroIntroProps> = props => {
               </div>
               <div>
                 {`Governance `}
-                <span style={{ color: 'rgba(0, 230, 137, 1)' }}>{`Protocol˚`}</span>
+                <span style={{ color: 'rgba(0, 230, 137, 1)' }}>{`Protocol`}</span>
               </div>
             </Typography>
           </Grid>
@@ -44,11 +44,11 @@ const HeroIntro: FC<HeroIntroProps> = props => {
                 color: '#fff',
               }}
             >
-              {`AGI is approaching, but there's no surefire guarantee that it will benefit humanity. That could change
-              with OpenSand, a project where we strengthen AGI using an open source blockchain under a united global
-              effort. In the OpenSand community, we're dedicated to creating a path towards trustworthy, transparent,
-              and ethical AGI. OpenSand's mission is to make sure we do more than living; we aim to thrive in an
-              entirely new ecosystem of excitement.`}
+              {`OpenSand is the first on-chain trustworthy AGI governance protocol.
+              Through decentralized governance,
+              it enables AGI to reach a trustworthy consensus while empowering communities under the premise of protecting community consensus.
+              We hope that every community has the right to possess a trustworthy AGI that upholds the community's consensus,
+              thereby preserving the diversity of "consciousness" in the digital world of AGI.`}
             </Typography>
           </Grid>
           <Grid item xs={12} md={3}>
