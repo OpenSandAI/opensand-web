@@ -8,6 +8,12 @@
   .content p {
     color: var(--color-grey-800);
   }
+
+ .content li {
+  color: #fff;
+  padding-left: 20px;
+  list-style: inside;
+  }
   
   .content .image {
     margin: var(--size-4) auto;
