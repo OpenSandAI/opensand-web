@@ -55,7 +55,7 @@ const FeatureIntro: FC<FeatureIntroProps> = props => {
                 >
                   {item.content}
                   {(item.contents || []).map(c => (
-                    <p>{c}</p>
+                    <p key={c}>{c}</p>
                   ))}
                 </Typography>
               </Typography>

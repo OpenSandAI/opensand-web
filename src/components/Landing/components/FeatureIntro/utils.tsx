@@ -29,7 +29,7 @@ export const featureList = [
             color: 'rgba(0, 230, 137, 1)',
           }}
         >
-          Protecting the Diversity of "Consciousness"
+          Protecting the Diversity of Consciousness
         </Typography>
         <Typography
           component="div"
