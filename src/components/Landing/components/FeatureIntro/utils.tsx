@@ -15,35 +15,40 @@ export const featureList = [
         <Typography
           component="div"
           sx={{
-            marginLeft: '6rem',
+            marginLeft: 0,
             fontSize: { xs: 60, md: 90 },
           }}
         >
-          THW BELT
+          Genuine Open AGI
         </Typography>
         <Typography
           component="div"
           sx={{
-            marginLeft: { xs: 0, md: '3rem' },
-            fontSize: { xs: 60, md: 90 },
+            marginLeft: { xs: 0, md: 0 },
+            fontSize: { xs: 60, md: 40 },
             color: 'rgba(0, 230, 137, 1)',
           }}
         >
-          AI ECOSYSTEM
+          Protecting the Diversity of "Consciousness"
         </Typography>
         <Typography
           component="div"
           sx={{
-            fontSize: { xs: 60, md: 90 },
+            fontSize: { xs: 60, md: 40 },
           }}
         >
-          OF GENERARE CONTENT
+          Open Source, Open Collaboration, Co-creation, and Co-governance
         </Typography>
       </Typography>
     ),
     title: 'Ommiscient Data',
-    content: `In this phase of the product, our goal is ambitious - we plan to gather all knowledge that exists in various fields, multiple industries, and held by individuals with diverse expertise. By bringing together these vast and intricate pieces of knowledge into one comprehensive and unified system, we're setting the stage for the emergence of
-    AGI. This consolidation is crucial for preparing us to fully harness the potential of AGI.`,
+    content: `Computational Infrastructure Assurance,
+    Academic computing power of 1500+H800 (approximately 1 billion HKD) supports AI services,
+    Technological Empowerment of the Web3 Community,
+    Weak to Strong Learning,
+    Transformer-Based SHA256 Proof of Work,
+    Responsible Scaling Consensus
+    `,
     pictureUrl: '/images/site/landing/landing-tech-first.png',
   },
   {
@@ -60,36 +65,24 @@ export const featureList = [
         <Typography
           component="div"
           sx={{
-            marginLeft: { xs: 0, md: '12rem' },
             fontSize: { xs: 60, md: 90 },
           }}
         >
-          THW BELT
-        </Typography>
-        <Typography
-          component="div"
-          sx={{
-            marginLeft: { xs: 0, md: '8rem' },
-            fontSize: { xs: 60, md: 90 },
-          }}
-        >
-          AI ECOSYSTEM
-        </Typography>
-        <Typography
-          component="div"
-          sx={{
-            fontSize: { xs: 60, md: 90 },
-          }}
-        >
-          OF{' '}
           <Typography component="span" sx={{ fontSize: { xs: 60, md: 90 }, color: 'rgba(0, 230, 137, 1)' }}>
-            GENERARE CONTENT
+            Applicable Scenarios
           </Typography>
         </Typography>
       </Typography>
     ),
-    title: 'Conscious Genesis',
-    content: `In this phase of our product, we are focused on ensuring thorough training and control of AGI. Our approach includes offering a robust suite of tools and algorithms specifically tailored for critical fields like machine learning, deep learning, reinforcement learning, natural language processing and fine-tuning. This will enable professional researchers within the community to conduct extensive experiments and research within a unified framework, fostering cross-disciplinary integration and collaboration.`,
+    title: '',
+    content: '',
+    contents: [
+      'AI Model Training Sub-protocol',
+      'AI Inference Framework Services',
+      'DApp Website Services',
+      'Off-chain Data Storage Services',
+      'Sand CDN Network',
+    ],
     pictureUrl: '/images/site/landing/landing-tech-secondary.png',
   },
   {
@@ -110,7 +103,7 @@ export const featureList = [
             color: 'rgba(0, 230, 137, 1)',
           }}
         >
-          THW BELT
+          Computing Power
         </Typography>
         <Typography
           component="div"
@@ -118,20 +111,12 @@ export const featureList = [
             fontSize: { xs: 60, md: 90 },
           }}
         >
-          AI ECOSYSTEM
-        </Typography>
-        <Typography
-          component="div"
-          sx={{
-            fontSize: { xs: 60, md: 90 },
-          }}
-        >
-          OF GENERARE CONTENT
+          1500+ NVIDIA H800
         </Typography>
       </Typography>
     ),
-    title: 'Singularity Ne',
-    content: `In the era of Internet 2.0, we're used to interacting through text and images, but this isn't enough for the age of AGI. The real revolution begins with reshaping the internet and the way we share information, using on-chain large language models (LLMs). Picture a world where your daily interactions, whether making friends, following people, or seeking business partners, are all facilitated by a dependable AGI assistant. This marks the dawn of a new ecosystem, where human connect, interact and syergize through the use of AGI.`,
+    title: 'Great Power for AI',
+    content: `Data, Multimodal Feature Model, Feature, Encoder Model, Connact(data, encode code), SHA256, Electronic Finger Print`,
     pictureUrl: '/images/site/landing/landing-tech-third.png',
   },
 ];

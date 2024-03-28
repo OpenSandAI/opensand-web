@@ -54,6 +54,9 @@ const FeatureIntro: FC<FeatureIntroProps> = props => {
                   }}
                 >
                   {item.content}
+                  {(item.contents || []).map(c => (
+                    <p>{c}</p>
+                  ))}
                 </Typography>
               </Typography>
             </Grid>
