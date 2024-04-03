@@ -16,7 +16,7 @@ OpenSand is a community-driven protocol for trusted AGI governance that aims to 
 
 The rapid development of artificial intelligence (AI) is disrupting our world. The emergence of artificial general intelligence (AGI), the ultimate goal of AI technology, may fundamentally change the course of human civilization.
 
-Large language models, led by ChatGPT, have begun to take shape as AGI. General and high-quality question-answering services provide assistance in writing, programming, data analysis and other areas, improving work and learning efficiency. However, the training data of language models has limitations and biases, and the output content inevitably contains errors, biases and other issues, creating a crisis of trust and seriously undermining consensus. In addition, the abuse of privacy information and harmful data can lead to AI being used for malicious purposes, creating false information and dangerous content. s urgently need a trustworthy AGI.
+Large language models, led by ChatGPT, have begun to take shape as AGI. General and high-quality question-answering services provide assistance in writing, programming, data analysis and other areas, improving work and learning efficiency. However, the training data of language models has limitations and biases, and the output content inevitably contains errors, biases and other issues, creating a crisis of trust and seriously undermining consensus. In addition, the abuse of privacy information and harmful data can lead to AI being used for malicious purposes, creating false information and dangerous content. So we urgently need a trustworthy AGI.
 
 ### Co-Governance: the only way to trust
 
