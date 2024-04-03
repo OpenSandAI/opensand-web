@@ -8,13 +8,22 @@
   height: 25rem;
 }
 
-.header h1 {
+.header h1  {
   font-size: var(--size-8);
   color: #fff;
   line-height: initial;
   margin-left: 3rem;
   font-size: 5rem;
   text-align: center;
+}
+
+.MuiContainer-root h2 {
+  color: #fff;
+  font-size: 100px;;
+}
+
+.MuiContainer-root h3 {
+  color: #fff;
 }
 
 .author {
