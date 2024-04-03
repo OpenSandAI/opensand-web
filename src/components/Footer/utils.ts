@@ -1,4 +1,3 @@
-
 /** 路由配置 */
 export const routeConfigList = {
   key: 'route',
@@ -15,8 +14,8 @@ export const routeConfigList = {
       link: '/',
     },
     {
-      key: 'WhitePaper',
-      title: 'WhitePaper',
+      key: 'Whitepaper',
+      title: 'Whitepaper',
       link: '/whitepaper',
     },
     {

@@ -9,6 +9,11 @@
     color: var(--color-grey-800);
   }
 
+  .content a {
+    color: #fff;
+    text-decoration: underline
+  }
+
  .content li {
   color: #fff;
   padding-left: 20px;

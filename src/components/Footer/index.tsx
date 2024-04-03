@@ -70,14 +70,35 @@ const Footer: FC<FooterProps> = props => {
                     <>
                       <Link
                         target="_blank"
-                        href="https://twitter.com/opensandai"
+                        href="https://twitter.com/opensand_ai"
                         key="twitter"
                         className={styles.dropLink}
                       >
                         Twitter
                       </Link>
-                      <Link target="_blank" href="https://discord.com/" key="discord" className={styles.dropLink}>
+                      <Link
+                        target="_blank"
+                        href="https://discord.gg/2wW9H445"
+                        key="Discord"
+                        className={styles.dropLink}
+                      >
                         Discord
+                      </Link>
+                      <Link
+                        target="_blank"
+                        href="https://medium.com/@opensand_ai"
+                        key="Medium"
+                        className={styles.dropLink}
+                      >
+                        Medium
+                      </Link>
+                      <Link
+                        target="_blank"
+                        href="https://t.me/+xfZnMY7F3ns1NjY1"
+                        key="Telegram"
+                        className={styles.dropLink}
+                      >
+                        Telegram
                       </Link>
                     </>
                   )}
