@@ -7,6 +7,8 @@ date: '2024-01-20'
 
 OpenSand is the first on-chain trustworthy AGI governance protocol. Through decentralized governance, it enables AGI to reach a trustworthy consensus while empowering communities under the premise of protecting community consensus. We hope that every community has the right to possess a trustworthy AGI that upholds the community's consensus, thereby preserving the diversity of "consciousness" in the digital world of AGI.
 
+&nbsp;
+
 ## Stage 1: Ommiscient Data
 
 - AI-MPOW + AIGPOS Consensus
@@ -18,6 +20,7 @@ OpenSand is the first on-chain trustworthy AGI governance protocol. Through dece
 - Contract Layer
 - Interface/DSM
 
+&nbsp;
 
 ## Stage 2: Conscious Genesis
 
@@ -29,6 +32,8 @@ OpenSand is the first on-chain trustworthy AGI governance protocol. Through dece
 - Scalability and security
 - AGI Model Assets
 - Interface/DBM
+
+&nbsp;
 
 ## Stage 3: Singularity Inference
 
