@@ -85,40 +85,40 @@ export const featureList = [
     ],
     pictureUrl: '/images/site/landing/landing-tech-secondary.png',
   },
-  {
-    type: 'feature3',
-    summary: (
-      <Typography
-        component="div"
-        sx={{
-          fontWeight: 600,
-          fontSize: { xs: 60, md: 90 },
-          color: '#FFF',
-        }}
-      >
-        <Typography
-          component="div"
-          sx={{
-            fontSize: { xs: 60, md: 90 },
-            color: 'rgba(0, 230, 137, 1)',
-          }}
-        >
-          Computing Power
-        </Typography>
-        <Typography
-          component="div"
-          sx={{
-            fontSize: { xs: 60, md: 90 },
-          }}
-        >
-          1500+ NVIDIA H800
-        </Typography>
-      </Typography>
-    ),
-    title: 'Great Power for AI',
-    content: `Data, Multimodal Feature Model, Feature, Encoder Model, Connact(data, encode code), SHA256, Electronic Finger Print`,
-    pictureUrl: '/images/site/landing/landing-tech-third.png',
-  },
+  // {
+  //   type: 'feature3',
+  //   summary: (
+  //     <Typography
+  //       component="div"
+  //       sx={{
+  //         fontWeight: 600,
+  //         fontSize: { xs: 60, md: 90 },
+  //         color: '#FFF',
+  //       }}
+  //     >
+  //       <Typography
+  //         component="div"
+  //         sx={{
+  //           fontSize: { xs: 60, md: 90 },
+  //           color: 'rgba(0, 230, 137, 1)',
+  //         }}
+  //       >
+  //         Computing Power
+  //       </Typography>
+  //       <Typography
+  //         component="div"
+  //         sx={{
+  //           fontSize: { xs: 60, md: 90 },
+  //         }}
+  //       >
+  //         1500+ NVIDIA H800
+  //       </Typography>
+  //     </Typography>
+  //   ),
+  //   title: 'Great Power for AI',
+  //   content: `Data, Multimodal Feature Model, Feature, Encoder Model, Connact(data, encode code), SHA256, Electronic Finger Print`,
+  //   pictureUrl: '/images/site/landing/landing-tech-third.png',
+  // },
 ];
 
 export const TEXT_ALIGN_MAP = {
