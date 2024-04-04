@@ -78,7 +78,7 @@ const Footer: FC<FooterProps> = props => {
                       </Link>
                       <Link
                         target="_blank"
-                        href="https://discord.gg/2wW9H445"
+                        href="https://discord.gg/QmKr2CNS"
                         key="Discord"
                         className={styles.dropLink}
                       >
