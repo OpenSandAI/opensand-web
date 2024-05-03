@@ -19,7 +19,7 @@ export const featureList = [
             fontSize: { xs: 60, md: 90 },
           }}
         >
-          Genuine Open AGI
+          UMS
         </Typography>
         <Typography
           component="div"
@@ -29,7 +29,7 @@ export const featureList = [
             color: 'rgba(0, 230, 137, 1)',
           }}
         >
-          Protecting the Diversity of Consciousness
+          Universal Modal Signature,
         </Typography>
         <Typography
           component="div"
@@ -37,7 +37,8 @@ export const featureList = [
             fontSize: { xs: 60, md: 40 },
           }}
         >
-          Open Source, Open Collaboration, Co-creation, and Co-governance
+          a universal multimodal signature algorithm. OpenSand combines self-learning multimodal feature modal with
+          SHA256 to design a related signature mechanism, ensuring the integrity of data and model weights.
         </Typography>
       </Typography>
     ),

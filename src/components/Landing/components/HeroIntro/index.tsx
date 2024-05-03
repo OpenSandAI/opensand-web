@@ -24,12 +24,12 @@ const HeroIntro: FC<HeroIntroProps> = props => {
               }}
             >
               <div>
-                {`The Trustworthy `}
-                <span style={{ color: 'rgba(0, 230, 137, 1)' }}>{`AGI`}</span>
+                {`Building a `}
+                <span style={{ color: 'rgba(0, 230, 137, 1)' }}>{`decentralized AI`}</span>
               </div>
               <div>
-                {`Governance `}
-                <span style={{ color: 'rgba(0, 230, 137, 1)' }}>{`Protocol`}</span>
+                {`Computing Power Network and `}
+                <span style={{ color: 'rgba(0, 230, 137, 1)' }}>{`AI Governance Protocol`}</span>
               </div>
             </Typography>
           </Grid>
@@ -44,11 +44,7 @@ const HeroIntro: FC<HeroIntroProps> = props => {
                 color: '#fff',
               }}
             >
-              {`OpenSand is the first on-chain trustworthy AGI governance protocol.
-              Through decentralized governance,
-              it enables AGI to reach a trustworthy consensus while empowering communities under the premise of protecting community consensus.
-              We hope that every community has the right to possess a trustworthy AGI that upholds the community's consensus,
-              thereby preserving the diversity of "consciousness" in the digital world of AGI.`}
+              {`OpenSand provides an AI infrastructure for global AGI developers to engage in decentralized training and deploy AI Smart Contracts and AI Dapps by building the AI DePIN distributed computing network.`}
             </Typography>
           </Grid>
           <Grid item xs={12} md={3}>

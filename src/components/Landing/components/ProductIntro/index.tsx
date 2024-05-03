@@ -56,9 +56,7 @@ const ProductIntro: FC<ProductIntroProps> = props => {
                   fontSize: '1.2rem',
                 }}
               >
-                {`The Sand consensus of OpenSand integrates AI-based Proof of Work (AI-MPoW) and Proof of Stake (AI-GPoS) mechanisms, constructing an efficient, secure, and decentralized hybrid consensus model.
-AI-driven adaptive incentives and dynamic staking mechanisms achieve coordination of computational power and stakeholder interests. Moreover, it enables decentralized services by AI models at the consensus layer.
-Zero-knowledge proofs and smart contract verification ensure privacy and security. The Sand consensus sets new benchmarks in fairness, scalability, and security, injecting vibrant energy into the development of blockchain technology.`}
+                {`Proof of Training ++DPoS++ GPU-Based POWs. Compatible with all GPU POWs.`}
               </Typography>
               <div className={styles.operation}>
                 <a className={styles.button} href="/apps">
