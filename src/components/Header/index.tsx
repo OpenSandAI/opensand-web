@@ -13,7 +13,8 @@ const Header = () => {
   const [mobileNavVisible, setMobileNavVisible] = useState(false);
   const { sdk, connected, connecting, account } = useSDK();
 
-  const connect = async () => {
+  const metamaskSignin = async () => {
+    console.log('metamaskSignin');
     try {
       await sdk?.connect();
     } catch (err) {
@@ -53,19 +54,22 @@ const Header = () => {
         <div className={styles.nav}>
           <ul className={styles.navList}>
             <li className={styles.linkItem}>
-              <Link href="/apps">APPLICATION</Link>
+              <Link href="/roadmap">Roadmap</Link>
             </li>
             <li className={styles.linkItem}>
-              <Link href="/whitepaper">WHITEPAPER</Link>
+              <Link href="/whitepaper">Whitepaper</Link>
             </li>
             <li className={styles.linkItem}>
-              <Link href="/roadmap">ROADMAP</Link>
+              <Link href="/apps">OS App</Link>
             </li>
             <li className={styles.linkItem}>
-              <Link href="/about">ABOUT</Link>
+              <Link href="/apps">OS Chain</Link>
             </li>
             <li className={styles.linkItem}>
-              <Link href="/contact">CONTACT US</Link>
+              <Link href="/contact">Contact Us</Link>
+            </li>
+            <li className={styles.linkItem}>
+              <Link href="/about">Blog</Link>
             </li>
           </ul>
         </div>
@@ -80,7 +84,7 @@ const Header = () => {
             {handleAccountSlice(account)}
           </Button>
         ) : (
-          <Button startIcon={<WalletIcon />} disabled={connecting} onClick={connect} className={styles.button}>
+          <Button startIcon={<WalletIcon />} disabled={connecting} onClick={metamaskSignin} className={styles.button}>
             Sign MetaMask
           </Button>
         )}
