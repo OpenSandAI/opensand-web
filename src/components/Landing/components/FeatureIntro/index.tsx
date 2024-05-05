@@ -63,6 +63,7 @@ const FeatureIntro: FC<FeatureIntroProps> = props => {
           </Grid>
         </Box>
       ))}
+
       <Box sx={{ position: 'relative', marginTop: '12rem', height: '700px' }}>
         <Typography
           component="div"
@@ -83,6 +84,84 @@ const FeatureIntro: FC<FeatureIntroProps> = props => {
           src="/images/site/landing/overview.png"
           alt="landing"
         />
+      </Box>
+
+      <Box sx={{ position: 'relative', marginTop: '20rem', height: '200px' }}>
+        <Grid container spacing={10} align="center" justify="center">
+          <Grid item xs={12} md={3}>
+            <Image
+              width={0}
+              height={0}
+              sizes="100%"
+              style={{ width: 'auto', height: '100px', margin: '10px auto' }}
+              src="/images/site/landing/corperates/c1.png"
+              alt="landing"
+            />
+            <Typography
+              sx={{
+                color: '#FFF',
+                fontSize: '1rem',
+              }}
+            >
+              The Hong Kong University of Science and Technology
+            </Typography>
+          </Grid>
+          <Grid item xs={12} md={3}>
+            <Image
+              width={0}
+              height={0}
+              sizes="100%"
+              style={{ width: 'auto', height: '100px', margin: '10px auto' }}
+              src="/images/site/landing/corperates/c2.png"
+              alt="landing"
+            />
+            <Typography
+              sx={{
+                color: '#FFF',
+                fontSize: '1rem',
+              }}
+            >
+              NVIDIA
+            </Typography>
+          </Grid>
+          <Grid item xs={12} md={3}>
+            <Image
+              width={0}
+              height={0}
+              sizes="100%"
+              style={{ width: 'auto', height: '100px', margin: '10px auto' }}
+              src="/images/site/landing/corperates/c3.png"
+              alt="landing"
+            />
+            <Typography
+              sx={{
+                color: '#FFF',
+                fontSize: '1rem',
+              }}
+            >
+              University of Oxford
+            </Typography>
+          </Grid>
+          <Grid item xs={12} md={3}>
+            <Image
+              width={0}
+              height={0}
+              sizes="100%"
+              style={{ width: 'auto', height: '100px', margin: '10px auto' }}
+              src="/images/site/landing/corperates/c4.png"
+              alt="landing"
+            />
+            <Typography
+              sx={{
+                margin: 'auto',
+                color: '#FFF',
+                fontSize: '1rem',
+              }}
+            >
+              Hong Kong Generative AI Research and Development Center
+            </Typography>
+          </Grid>
+        </Grid>
       </Box>
     </Container>
   );
