@@ -42,14 +42,14 @@ export const featureList = [
         </Typography>
       </Typography>
     ),
-    title: 'Ommiscient Data',
-    content: `Computational Infrastructure Assurance,
-    Academic computing power of 1500+H800 (approximately 1 billion HKD) supports AI services,
-    Technological Empowerment of the Web3 Community,
-    Weak to Strong Learning,
-    Transformer-Based SHA256 Proof of Work,
-    Responsible Scaling Consensus
-    `,
+    // title: 'Ommiscient Data',
+    // content: `Computational Infrastructure Assurance,
+    // Academic computing power of 1500+H800 (approximately 1 billion HKD) supports AI services,
+    // Technological Empowerment of the Web3 Community,
+    // Weak to Strong Learning,
+    // Transformer-Based SHA256 Proof of Work,
+    // Responsible Scaling Consensus
+    // `,
     pictureUrl: '/images/site/landing/landing-tech-first.png',
   },
   {

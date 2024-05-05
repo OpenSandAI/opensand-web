@@ -63,13 +63,15 @@ const Header = () => {
               <Link href="/apps">OS App</Link>
             </li>
             <li className={styles.linkItem}>
-              <Link href="/apps">OS Chain</Link>
+              <Link href="/whitepaper">OS Chain</Link>
             </li>
             <li className={styles.linkItem}>
               <Link href="/contact">Contact Us</Link>
             </li>
             <li className={styles.linkItem}>
-              <Link href="/about">Blog</Link>
+              <Link href="https://medium.com/@opensand_ai" target="_blank">
+                Blog
+              </Link>
             </li>
           </ul>
         </div>

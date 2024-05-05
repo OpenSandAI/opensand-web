@@ -9,7 +9,7 @@ const FeatureIntro: FC<FeatureIntroProps> = props => {
   return (
     <Container maxWidth="lg">
       {featureList.map(item => (
-        <Box key={item.type} sx={{ position: 'relative', marginTop: '12rem' }}>
+        <Box key={item.type} sx={{ position: 'relative', marginTop: '10rem' }}>
           <Grid container spacing={0}>
             <Grid item xs={12} md={12}>
               {item.summary}
@@ -63,6 +63,27 @@ const FeatureIntro: FC<FeatureIntroProps> = props => {
           </Grid>
         </Box>
       ))}
+      <Box sx={{ position: 'relative', marginTop: '12rem', height: '700px' }}>
+        <Typography
+          component="div"
+          sx={{
+            marginLeft: 0,
+            fontSize: { xs: 60, md: 90 },
+            color: '#FFF',
+            margin: '2rem 0',
+          }}
+        >
+          Core Design
+        </Typography>
+        <Image
+          width={0}
+          height={0}
+          sizes="100%"
+          style={{ width: 'auto', height: '600px', margin: '0 auto' }}
+          src="/images/site/landing/overview.png"
+          alt="landing"
+        />
+      </Box>
     </Container>
   );
 };
