@@ -8,6 +8,28 @@ interface FeatureIntroProps {}
 const FeatureIntro: FC<FeatureIntroProps> = props => {
   return (
     <Container maxWidth="lg">
+      <Box sx={{ position: 'relative', marginTop: '12rem', height: '700px' }}>
+        <Typography
+          component="div"
+          sx={{
+            marginLeft: 0,
+            fontSize: { xs: 60, md: 90 },
+            color: '#FFF',
+            margin: '2rem 0',
+          }}
+        >
+          Core Design
+        </Typography>
+        <Image
+          width={0}
+          height={0}
+          sizes="100%"
+          style={{ width: 'auto', height: '600px', margin: '0 auto' }}
+          src="/images/site/landing/overview.png"
+          alt="landing"
+        />
+      </Box>
+
       {featureList.map(item => (
         <Box key={item.type} sx={{ position: 'relative', marginTop: '10rem' }}>
           <Grid container spacing={0}>
@@ -64,30 +86,8 @@ const FeatureIntro: FC<FeatureIntroProps> = props => {
         </Box>
       ))}
 
-      <Box sx={{ position: 'relative', marginTop: '12rem', height: '700px' }}>
-        <Typography
-          component="div"
-          sx={{
-            marginLeft: 0,
-            fontSize: { xs: 60, md: 90 },
-            color: '#FFF',
-            margin: '2rem 0',
-          }}
-        >
-          Core Design
-        </Typography>
-        <Image
-          width={0}
-          height={0}
-          sizes="100%"
-          style={{ width: 'auto', height: '600px', margin: '0 auto' }}
-          src="/images/site/landing/overview.png"
-          alt="landing"
-        />
-      </Box>
-
       <Box sx={{ position: 'relative', marginTop: '20rem', height: '200px' }}>
-        <Grid container spacing={10} align="center" justify="center">
+        <Grid container spacing={10} style={{ textAlign: 'center' }}>
           <Grid item xs={12} md={3}>
             <Image
               width={0}
