@@ -86,7 +86,12 @@ const Header = () => {
             {handleAccountSlice(account)}
           </Button>
         ) : (
-          <Button startIcon={<WalletIcon />} disabled={connecting} onClick={metamaskSignin} className={styles.button}>
+          <Button
+            startIcon={<WalletIcon />}
+            disabled={connecting}
+            onClick={() => metamaskSignin()}
+            className={styles.button}
+          >
             Sign MetaMask
           </Button>
         )}
