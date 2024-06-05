@@ -36,7 +36,7 @@ importers:
         specifier: ^11.9.0
         version: 11.9.0
       next:
-        specifier: ^14.2.3
+        specifier: 14.2.3
         version: 14.2.3(@babel/core@7.23.9)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       react:
         specifier: ^18
@@ -3884,6 +3884,7 @@ packages:
 
   rimraf@2.6.3:
     resolution: {integrity: sha512-mwqeW5XsA2qAejG46gYdENaxXjx9onRNCfn7L0duuP4hCuTIi/QO7PDK07KJfp1d+izWPrzEJDcSqBa0OZQriA==}
+    deprecated: Rimraf versions prior to v4 are no longer supported
     hasBin: true
 
   rimraf@3.0.2:

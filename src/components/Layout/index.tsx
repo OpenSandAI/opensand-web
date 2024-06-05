@@ -34,9 +34,9 @@ const Layout = (props: { children: React.ReactNode }) => {
   return (
     <body>
       <ThemeProvider theme={theme}>
-        <MetaMaskProvider debug={false} sdkOptions={sdkOptions}>
-          <Header />
-        </MetaMaskProvider>
+        {/* <MetaMaskProvider debug={false} sdkOptions={sdkOptions}> */}
+        <Header />
+        {/* </MetaMaskProvider> */}
         {children}
         <Footer />
       </ThemeProvider>
